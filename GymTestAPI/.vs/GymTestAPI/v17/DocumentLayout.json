@@ -3,48 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestdl\\gymtestcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|solutionrelative:gymtestdl\\gymtestcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestdl\\models\\cyclingsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|solutionrelative:gymtestdl\\models\\cyclingsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestdl\\models\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|solutionrelative:gymtestdl\\models\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestdl\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|solutionrelative:gymtestdl\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestdl\\models\\programmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|solutionrelative:gymtestdl\\models\\programmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestdl\\models\\runningsessionmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|solutionrelative:gymtestdl\\models\\runningsessionmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestdl\\models\\timeslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|solutionrelative:gymtestdl\\models\\timeslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestdl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|solutionrelative:gymtestdl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestdl\\models\\programmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|solutionrelative:gymtestdl\\models\\programmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestdl\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|solutionrelative:gymtestdl\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestdl\\models\\runningsessiondetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|solutionrelative:gymtestdl\\models\\runningsessiondetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestapi\\gymcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|solutionrelative:gymtestapi\\gymcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestapi\\models\\cyclingsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|solutionrelative:gymtestapi\\models\\cyclingsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestapi\\models\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|solutionrelative:gymtestapi\\models\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestapi\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|solutionrelative:gymtestapi\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestapi\\models\\programmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|solutionrelative:gymtestapi\\models\\programmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestapi\\models\\programmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|solutionrelative:gymtestapi\\models\\programmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestapi\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|solutionrelative:gymtestapi\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestapi\\models\\runningsessiondetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|solutionrelative:gymtestapi\\models\\runningsessiondetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestapi\\models\\runningsessionmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|solutionrelative:gymtestapi\\models\\runningsessionmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestapi\\models\\timeslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|solutionrelative:gymtestapi\\models\\timeslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|solutionrelative:gymtestapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestdl\\gymtestdl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B91D6FB4-14B0-48F1-A928-AA914DA052C5}|GymTestDL\\GymTestDL.csproj|solutionrelative:gymtestdl\\gymtestdl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C913BF7B-8BF2-4632-88CA-C5E7DA67D03D}|GymTestBL\\GymTestBL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestbl\\gymtestmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C913BF7B-8BF2-4632-88CA-C5E7DA67D03D}|GymTestBL\\GymTestBL.csproj|solutionrelative:gymtestbl\\gymtestmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C913BF7B-8BF2-4632-88CA-C5E7DA67D03D}|GymTestBL\\GymTestBL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestbl\\gymtestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C913BF7B-8BF2-4632-88CA-C5E7DA67D03D}|GymTestBL\\GymTestBL.csproj|solutionrelative:gymtestbl\\gymtestrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C913BF7B-8BF2-4632-88CA-C5E7DA67D03D}|GymTestBL\\GymTestBL.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestbl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C913BF7B-8BF2-4632-88CA-C5E7DA67D03D}|GymTestBL\\GymTestBL.csproj|solutionrelative:gymtestbl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1946B4DC-D27E-4097-98C5-D24F7886FC56}|GymTestAPI\\GymTestAPI.csproj|c:\\users\\deans\\documents\\github\\proggev2\\gymtestapi\\gymtestapi\\gymtestapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
@@ -74,141 +98,219 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RunningSessionMain.cs",
-              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\RunningSessionMain.cs",
-              "RelativeDocumentMoniker": "GymTestAPI\\Models\\RunningSessionMain.cs",
-              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\RunningSessionMain.cs",
-              "RelativeToolTip": "GymTestAPI\\Models\\RunningSessionMain.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAYAAAA",
+              "DocumentIndex": 0,
+              "Title": "GymTestContext.cs",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\GymTestContext.cs",
+              "RelativeDocumentMoniker": "GymTestDL\\GymTestContext.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\GymTestContext.cs",
+              "RelativeToolTip": "GymTestDL\\GymTestContext.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAYwCAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T09:19:39.432Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RunningSessionDetail.cs",
-              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\RunningSessionDetail.cs",
-              "RelativeDocumentMoniker": "GymTestAPI\\Models\\RunningSessionDetail.cs",
-              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\RunningSessionDetail.cs",
-              "RelativeToolTip": "GymTestAPI\\Models\\RunningSessionDetail.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T09:18:41.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Reservation.cs",
-              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\Reservation.cs",
-              "RelativeDocumentMoniker": "GymTestAPI\\Models\\Reservation.cs",
-              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\Reservation.cs",
-              "RelativeToolTip": "GymTestAPI\\Models\\Reservation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T09:16:48.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProgramMember.cs",
-              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\ProgramMember.cs",
-              "RelativeDocumentMoniker": "GymTestAPI\\Models\\ProgramMember.cs",
-              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\ProgramMember.cs",
-              "RelativeToolTip": "GymTestAPI\\Models\\ProgramMember.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T09:16:13.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProgramModel.cs",
-              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\ProgramModel.cs",
-              "RelativeDocumentMoniker": "GymTestAPI\\Models\\ProgramModel.cs",
-              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\ProgramModel.cs",
-              "RelativeToolTip": "GymTestAPI\\Models\\ProgramModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T09:14:19.586Z",
+              "WhenOpened": "2024-12-03T09:14:09.669Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Member.cs",
-              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\Member.cs",
-              "RelativeDocumentMoniker": "GymTestAPI\\Models\\Member.cs",
-              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\Member.cs",
-              "RelativeToolTip": "GymTestAPI\\Models\\Member.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAxwBIAAAABAAAA",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\Member.cs",
+              "RelativeDocumentMoniker": "GymTestDL\\Models\\Member.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\Member.cs",
+              "RelativeToolTip": "GymTestDL\\Models\\Member.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T09:11:27.567Z",
+              "WhenOpened": "2024-12-03T09:38:05.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RunningSessionMain.cs",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\RunningSessionMain.cs",
+              "RelativeDocumentMoniker": "GymTestDL\\Models\\RunningSessionMain.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\RunningSessionMain.cs",
+              "RelativeToolTip": "GymTestDL\\Models\\RunningSessionMain.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T09:46:55.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProgramModel.cs",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\ProgramModel.cs",
+              "RelativeDocumentMoniker": "GymTestDL\\Models\\ProgramModel.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\ProgramModel.cs",
+              "RelativeToolTip": "GymTestDL\\Models\\ProgramModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T09:48:58.738Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "CyclingSession.cs",
-              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\CyclingSession.cs",
-              "RelativeDocumentMoniker": "GymTestAPI\\Models\\CyclingSession.cs",
-              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\CyclingSession.cs",
-              "RelativeToolTip": "GymTestAPI\\Models\\CyclingSession.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAYAAAAWAAAA",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\CyclingSession.cs",
+              "RelativeDocumentMoniker": "GymTestDL\\Models\\CyclingSession.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\CyclingSession.cs",
+              "RelativeToolTip": "GymTestDL\\Models\\CyclingSession.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T09:07:32.458Z",
+              "WhenOpened": "2024-12-03T09:34:52.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TimeSlot.cs",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\TimeSlot.cs",
+              "RelativeDocumentMoniker": "GymTestDL\\Models\\TimeSlot.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\TimeSlot.cs",
+              "RelativeToolTip": "GymTestDL\\Models\\TimeSlot.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T09:48:46.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProgramMember.cs",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\ProgramMember.cs",
+              "RelativeDocumentMoniker": "GymTestDL\\Models\\ProgramMember.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\ProgramMember.cs",
+              "RelativeToolTip": "GymTestDL\\Models\\ProgramMember.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T09:49:10.567Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Equipment.cs",
-              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\Equipment.cs",
-              "RelativeDocumentMoniker": "GymTestAPI\\Models\\Equipment.cs",
-              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\Equipment.cs",
-              "RelativeToolTip": "GymTestAPI\\Models\\Equipment.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\Equipment.cs",
+              "RelativeDocumentMoniker": "GymTestDL\\Models\\Equipment.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\Equipment.cs",
+              "RelativeToolTip": "GymTestDL\\Models\\Equipment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T09:10:32.26Z",
+              "WhenOpened": "2024-12-03T09:48:26.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Program.cs",
+              "RelativeDocumentMoniker": "GymTestDL\\Program.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Program.cs",
+              "RelativeToolTip": "GymTestDL\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T08:40:47.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GymTestDL",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\GymTestDL.csproj",
+              "RelativeDocumentMoniker": "GymTestDL\\GymTestDL.csproj",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\GymTestDL.csproj",
+              "RelativeToolTip": "GymTestDL\\GymTestDL.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-03T09:12:59.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RunningSessionDetail.cs",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\RunningSessionDetail.cs",
+              "RelativeDocumentMoniker": "GymTestDL\\Models\\RunningSessionDetail.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\RunningSessionDetail.cs",
+              "RelativeToolTip": "GymTestDL\\Models\\RunningSessionDetail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T09:47:05.435Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "TimeSlot.cs",
-              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\TimeSlot.cs",
-              "RelativeDocumentMoniker": "GymTestAPI\\Models\\TimeSlot.cs",
-              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Models\\TimeSlot.cs",
-              "RelativeToolTip": "GymTestAPI\\Models\\TimeSlot.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAjAAAA",
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\Reservation.cs",
+              "RelativeDocumentMoniker": "GymTestDL\\Models\\Reservation.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestDL\\Models\\Reservation.cs",
+              "RelativeToolTip": "GymTestDL\\Models\\Reservation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T09:20:23.141Z",
+              "WhenOpened": "2024-12-03T09:48:12.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 14,
+              "Title": "GymTestManager.cs",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestBL\\GymTestManager.cs",
+              "RelativeDocumentMoniker": "GymTestBL\\GymTestManager.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestBL\\GymTestManager.cs",
+              "RelativeToolTip": "GymTestBL\\GymTestManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T09:12:43.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GymTestRepo.cs",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestBL\\GymTestRepo.cs",
+              "RelativeDocumentMoniker": "GymTestBL\\GymTestRepo.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestBL\\GymTestRepo.cs",
+              "RelativeToolTip": "GymTestBL\\GymTestRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T09:12:27.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "GymContext.cs",
               "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\GymContext.cs",
               "RelativeDocumentMoniker": "GymTestAPI\\GymContext.cs",
               "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\GymContext.cs",
               "RelativeToolTip": "GymTestAPI\\GymContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAwAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T09:27:25.046Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestBL\\Program.cs",
+              "RelativeDocumentMoniker": "GymTestBL\\Program.cs",
+              "ToolTip": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestBL\\Program.cs",
+              "RelativeToolTip": "GymTestBL\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T08:40:28.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\appsettings.json",
               "RelativeDocumentMoniker": "GymTestAPI\\appsettings.json",
@@ -221,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "GymTestAPI.http",
               "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\GymTestAPI.http",
               "RelativeDocumentMoniker": "GymTestAPI\\GymTestAPI.http",
@@ -234,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "ReservationController.cs",
               "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Controllers\\ReservationController.cs",
               "RelativeDocumentMoniker": "GymTestAPI\\Controllers\\ReservationController.cs",
@@ -247,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "ProgramController.cs",
               "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Controllers\\ProgramController.cs",
               "RelativeDocumentMoniker": "GymTestAPI\\Controllers\\ProgramController.cs",
@@ -260,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "EquipmentController.cs",
               "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Controllers\\EquipmentController.cs",
               "RelativeDocumentMoniker": "GymTestAPI\\Controllers\\EquipmentController.cs",
@@ -273,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "MemberController.cs",
               "DocumentMoniker": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Controllers\\MemberController.cs",
               "RelativeDocumentMoniker": "GymTestAPI\\Controllers\\MemberController.cs",
