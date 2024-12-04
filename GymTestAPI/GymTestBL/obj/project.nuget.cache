@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hQ38MFZXCw/pgTu/QnZJL+F51xH9kQWTNEBxDKPyv45PfY1w2YlcYuan3CD5dJ6SFc5JhfizTatXvIZzKamQww==",
+  "dgSpecHash": "D9cfL04S8OY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestBL\\GymTestBL.csproj",
+  "projectFilePath": "C:\\Users\\schel\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestBL\\GymTestBL.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

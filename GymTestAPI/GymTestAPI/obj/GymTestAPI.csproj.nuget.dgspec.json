@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\GymTestAPI.csproj": {}
+    "C:\\Users\\schel\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\GymTestAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\GymTestAPI.csproj": {
+    "C:\\Users\\schel\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\GymTestAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\GymTestAPI.csproj",
+        "projectUniqueName": "C:\\Users\\schel\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\GymTestAPI.csproj",
         "projectName": "GymTestAPI",
-        "projectPath": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\GymTestAPI.csproj",
-        "packagesPath": "C:\\Users\\deans\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deans\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\obj\\",
+        "projectPath": "C:\\Users\\schel\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\GymTestAPI.csproj",
+        "packagesPath": "C:\\Users\\schel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\schel\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\deans\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\schel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
