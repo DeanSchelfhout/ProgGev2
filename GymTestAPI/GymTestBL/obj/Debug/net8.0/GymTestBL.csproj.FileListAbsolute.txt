@@ -1,0 +1,15 @@
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\bin\Debug\net8.0\GymTestBL.exe
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\bin\Debug\net8.0\GymTestBL.deps.json
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\bin\Debug\net8.0\GymTestBL.runtimeconfig.json
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\bin\Debug\net8.0\GymTestBL.dll
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\bin\Debug\net8.0\GymTestBL.pdb
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\obj\Debug\net8.0\GymTestBL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\obj\Debug\net8.0\GymTestBL.AssemblyInfoInputs.cache
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\obj\Debug\net8.0\GymTestBL.AssemblyInfo.cs
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\obj\Debug\net8.0\GymTestBL.csproj.CoreCompileInputs.cache
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\obj\Debug\net8.0\GymTestBL.sourcelink.json
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\obj\Debug\net8.0\GymTestBL.dll
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\obj\Debug\net8.0\refint\GymTestBL.dll
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\obj\Debug\net8.0\GymTestBL.pdb
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\obj\Debug\net8.0\GymTestBL.genruntimeconfig.cache
+C:\Users\schel\Documents\GitHub\ProgGev2\GymTestAPI\GymTestBL\obj\Debug\net8.0\ref\GymTestBL.dll

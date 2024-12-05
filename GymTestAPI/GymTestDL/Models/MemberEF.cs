@@ -5,6 +5,10 @@ namespace GymTestDL.Models
 {
     public class MemberEF
     {
+        public MemberEF()
+        {
+        }
+
         public MemberEF(int memberId, string firstName, string lastName, string email, string address, DateTime birthday, List<string> interests, ICollection<CyclingSessionEF> cyclingSessions, ICollection<RunningSessionMainEF> runningSessions, ICollection<ReservationEF> reservations, ICollection<ProgramModelEF> programs,string memberType)
         {
             MemberId = memberId;

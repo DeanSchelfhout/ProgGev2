@@ -1,4 +1,6 @@
-﻿namespace GymTestDL.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace GymTestDL.Models
 {
     public class CyclingSessionEF
     {
@@ -16,6 +18,7 @@
             MemberId = memberId;
         }
 
+        [Key]
         public int CyclingSessionId { get; set; }
         public DateTime Date { get; set; }
         public TimeSpan Duration { get; set; }

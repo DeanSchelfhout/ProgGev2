@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using GymTestBL.Models;
+using GymTestBL.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GymTestAPI.Controllers
@@ -7,10 +9,12 @@ namespace GymTestAPI.Controllers
     [ApiController]
     public class MemberController : ControllerBase
     {
+        MemberService memberService;
+
         [HttpGet]
-        public string GetAll()
+        public List<Member> GetAll()
         {
-            return "fuck you maite";
+            return memberService.GetAllMembers();
         }
     }
 }

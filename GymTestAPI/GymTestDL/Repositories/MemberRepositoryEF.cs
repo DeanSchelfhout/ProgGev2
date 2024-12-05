@@ -7,6 +7,7 @@ using GymTestBL.Models;
 using GymTestBL.Interfaces;
 using GymTestDL.Mappers;
 using GymTestDL.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace GymTestDL.Repositories
 {
@@ -56,6 +57,31 @@ namespace GymTestDL.Repositories
             {
 
                 throw new Exception("UpdateMember");
+            }
+        }
+        public void DeleteMember(int id)
+        {
+            try
+            {
+                _context.Members.Remove(new MemberEF() { MemberId = id });
+                SaveAndClear();
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("DeleteMember");
+            }
+        }
+        public void AddMember(Member member)
+        {
+            try
+            {
+                _context.Members.Add(MapMember.MapToDL(member));
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("AddMember");
             }
         }
     }

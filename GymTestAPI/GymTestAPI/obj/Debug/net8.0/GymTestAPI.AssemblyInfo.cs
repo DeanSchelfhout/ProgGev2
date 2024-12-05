@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GymTestAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50d638338b7d7905a67728b119450823d5c55406")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49d4cda8e4e7e0d711aaf9bf5889e0e4a4df20c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("GymTestAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GymTestAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
