@@ -24,6 +24,18 @@
             MemberType = memberType;
         }
 
+        public Member(int memberId, string firstName, string lastName, string email, string address, DateTime birthday, List<string> interests, memberType memberType)
+        {
+            MemberId = memberId;
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+            Address = address;
+            Birthday = birthday;
+            Interests = interests;
+            MemberType = memberType;
+        }
+
         public int MemberId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

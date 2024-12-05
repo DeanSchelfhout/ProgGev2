@@ -1,4 +1,6 @@
-﻿using GymTestBL.Models;
+﻿using GymTestAPI.DTO;
+using GymTestBL.Interfaces;
+using GymTestBL.Models;
 using GymTestBL.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,12 +11,33 @@ namespace GymTestAPI.Controllers
     [ApiController]
     public class MemberController : ControllerBase
     {
-        MemberService memberService;
-
+        IMemberRepository Repo;
+        public MemberController(IMemberRepository memberRepository) 
+        { 
+            Repo = memberRepository;
+        }
         [HttpGet]
         public List<Member> GetAll()
         {
-            return memberService.GetAllMembers();
+           return Repo.GetAllMembers();
+        }
+
+        [HttpPost]
+        public void Post([FromBody] MemberDTO dataIn) 
+        {
+            Member member = new Member
+                (
+                dataIn.MemberId,
+                dataIn.FirstName,
+                dataIn.LastName,
+                dataIn.Email,
+                dataIn.Address,
+                dataIn.Birthday,
+                dataIn.Interests,
+                dataIn.MemberType
+                );
+
+            Repo.AddMember(member);
         }
     }
 }

@@ -1,6 +1,7 @@
 using GymTestBL.Interfaces;
 using GymTestBL.Services;
 using GymTestDL;
+using GymTestDL.Repositories;
 
 namespace GymTestAPI
 {
@@ -23,7 +24,9 @@ namespace GymTestAPI
             });
 
             builder.Services.AddDbContext<GymTestContext>();
+            builder.Services.AddScoped<IMemberRepository, MemberRepositoryEF>();
             builder.Services.AddScoped<MemberService>();
+
 
             // Voeg hier de JsonOptions toe om circulaire referenties te ondersteunen
             builder.Services.AddControllers();
