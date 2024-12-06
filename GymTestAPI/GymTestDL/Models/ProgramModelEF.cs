@@ -21,7 +21,7 @@ namespace GymTestDL.Models
         public int MaxMembers { get; set; }
 
         // Navigation Properties
-        public ICollection<ProgramMemberEF> ProgramMembers { get; set; }
+        public ICollection<MemberEF> Members{ get; set; }
     }
 
 }

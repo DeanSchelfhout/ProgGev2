@@ -1,4 +1,5 @@
 ﻿using GymTestBL.Models;
+using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
 namespace GymTestDL.Models
@@ -24,7 +25,7 @@ namespace GymTestDL.Models
             Programs = programs;
             MemberType = memberType;
         }
-
+        [Key]
         public int MemberId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

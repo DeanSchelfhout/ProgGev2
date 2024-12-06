@@ -1,7 +1,10 @@
-﻿namespace GymTestDL.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace GymTestDL.Models
 {
     public class RunningSessionDetailEF
     {
+        [Key]
         public int RunningSessionId { get; set; }
         public int SeqNr { get; set; }
         public TimeSpan IntervalTime { get; set; }

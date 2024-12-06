@@ -1,4 +1,6 @@
-﻿namespace GymTestDL.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace GymTestDL.Models
 {
     public class ReservationEF
     {
@@ -10,7 +12,7 @@
             Date = date;
             MemberId = memberId;
         }
-
+        [Key]
         public int ReservationId { get; set; }
         public int EquipmentId { get; set; }
         public int TimeSlotId { get; set; }

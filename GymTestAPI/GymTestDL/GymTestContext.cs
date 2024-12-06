@@ -8,7 +8,6 @@ namespace GymTestDL
         public DbSet<CyclingSessionEF> CyclingSessions { get; set; }
         public DbSet<EquipmentEF> Equipment { get; set; }
         public DbSet<MemberEF> Members { get; set; }
-        public DbSet<ProgramMemberEF> ProgramMembers { get; set; }
         public DbSet<ProgramModelEF> ProgramModels { get; set; }
         public DbSet<ReservationEF> Reservations { get; set; }
         public DbSet<RunningSessionDetailEF> RunningSessionDetails { get; set; }
@@ -19,7 +18,7 @@ namespace GymTestDL
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=Dean_MSI\SQLEXPRESS;Initial Catalog=GymTest;Integrated Security=True;Trust Server Certificate=True");
+            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-8MGSS95;Initial Catalog=GymTest;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
         }
     }
 }
