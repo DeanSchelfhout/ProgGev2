@@ -19,7 +19,8 @@ namespace GymTestDL.Mappers
                     db.Date,
                     db.MemberId,
                     db.Duration,
-                    db.AvgSpeed
+                    db.AvgSpeed,
+                    db.Details?.Select(RunningSessionDetailMapper.MapToBL).ToList() ?? new List<RunningSessionDetail>()
                     );
             }
             catch (Exception)
@@ -36,7 +37,8 @@ namespace GymTestDL.Mappers
                     r.Date,
                     r.MemberId,
                     r.Duration,
-                    r.AvgSpeed
+                    r.AvgSpeed,
+                    r.Details?.Select(RunningSessionDetailMapper.MapToDL).ToList() ?? new List<RunningSessionDetailEF>()
                    );
             }
             catch (Exception)

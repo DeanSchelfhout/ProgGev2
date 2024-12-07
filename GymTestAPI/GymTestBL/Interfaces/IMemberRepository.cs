@@ -10,9 +10,9 @@ namespace GymTestBL.Interfaces
     public interface IMemberRepository
     {
         Member GetMember(int Id);
-        void DeleteMember(int Id);
-        void UpdateMember(Member member);
-        void AddMember(Member member);
+        bool DeleteMember(int Id);
+        Member UpdateMember(Member member);
+        Member AddMember(Member member);
         List<Member> GetAllMembers();
     }
 }

@@ -6,11 +6,14 @@ namespace GymTestDL.Models
 {
     public class MemberEF
     {
+        private List<string> list;
+        private string v;
+
         public MemberEF()
         {
         }
 
-        public MemberEF(int memberId, string firstName, string lastName, string email, string address, DateTime birthday, List<string> interests, ICollection<CyclingSessionEF> cyclingSessions, ICollection<RunningSessionMainEF> runningSessions, ICollection<ReservationEF> reservations, ICollection<ProgramModelEF> programs,string memberType)
+        public MemberEF(int? memberId, string firstName, string lastName, string email, string address, DateTime birthday, List<string> interests, ICollection<CyclingSessionEF> cyclingSessionEFs, ICollection<RunningSessionMainEF> runningSessionMainEFs, ICollection<ReservationEF> reservationEFs, ICollection<ProgramModelEF> programModelEFs, string memberType)
         {
             MemberId = memberId;
             FirstName = firstName;
@@ -19,14 +22,15 @@ namespace GymTestDL.Models
             Address = address;
             Birthday = birthday;
             Interests = interests;
-            CyclingSessions = cyclingSessions;
-            RunningSessions = runningSessions;
-            Reservations = reservations;
-            Programs = programs;
+            CyclingSessions = cyclingSessionEFs;
+            RunningSessions = runningSessionMainEFs;
+            Reservations = reservationEFs;
+            Programs = programModelEFs;
             MemberType = memberType;
         }
+
         [Key]
-        public int MemberId { get; set; }
+        public int? MemberId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }

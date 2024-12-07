@@ -4,13 +4,14 @@ namespace GymTestDL.Models
 {
     public class RunningSessionMainEF
     {
-        public RunningSessionMainEF(int runningSessionId, DateTime date, int memberId, TimeSpan duration, float avgSpeed)
+        public RunningSessionMainEF(int runningSessionId, DateTime date, int memberId, TimeSpan duration, float avgSpeed, ICollection<RunningSessionDetailEF> details)
         {
             RunningSessionId = runningSessionId;
             Date = date;
             MemberId = memberId;
             Duration = duration;
             AvgSpeed = avgSpeed;
+            Details = details;
         }
 
         [Key]

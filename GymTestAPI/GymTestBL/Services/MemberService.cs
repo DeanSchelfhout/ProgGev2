@@ -21,22 +21,23 @@ namespace GymTestBL.Services
             {
                 return _memberRepository.GetMember(id);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw new Exception("GetMember");
+                throw new Exception("GetMember",ex);
             }
         }
-        public void DeleteMember(int id)
+        public bool DeleteMember(int id)
         {
             try
             {
-                _memberRepository.DeleteMember(id);
+               _memberRepository.DeleteMember(id);
+                return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw new Exception("DeleteMember");
+                throw new Exception("DeleteMember",ex);
             }
         }
         public Member AddMember(Member member)
@@ -44,13 +45,12 @@ namespace GymTestBL.Services
             try
             {
                 if (member == null) throw new Exception("AddMember - member is null");
-                _memberRepository.AddMember(member);
-                return member;
+                return _memberRepository.AddMember(member);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw new Exception("AddMember");
+                throw new Exception("AddMember",ex);
             }
         }
         public List<Member> GetAllMembers()
@@ -59,10 +59,10 @@ namespace GymTestBL.Services
             {
                 return _memberRepository.GetAllMembers();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw new Exception("GetAllMembers");
+                throw new Exception("GetAllMembers",ex);
             }
         }
         public Member UpdateMember(Member member)
@@ -73,10 +73,10 @@ namespace GymTestBL.Services
                 _memberRepository.UpdateMember(member);
                 return member;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw new Exception("UpdateMember");
+                throw new Exception("UpdateMember",ex);
             }
         }
     }

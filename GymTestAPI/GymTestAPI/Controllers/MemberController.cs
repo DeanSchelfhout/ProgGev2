@@ -11,19 +11,29 @@ namespace GymTestAPI.Controllers
     [ApiController]
     public class MemberController : ControllerBase
     {
-        IMemberRepository Repo;
-        public MemberController(IMemberRepository memberRepository) 
-        { 
-            Repo = memberRepository;
+        MemberService RepoService;
+        public MemberController(MemberService memberService) 
+        {
+            RepoService = memberService;
         }
+
+        [Route("GetMember/{id}")]
+        [HttpGet]
+        public Member Get(int id)
+        {
+            return RepoService.GetMember(id);
+        }
+
+        [Route("GetAll")]
         [HttpGet]
         public List<Member> GetAll()
         {
-           return Repo.GetAllMembers();
+           return RepoService.GetAllMembers();
         }
 
+        [Route("Add")]
         [HttpPost]
-        public void Post([FromBody] MemberDTO dataIn) 
+        public Member Add([FromBody] MemberDTO dataIn) 
         {
             Member member = new Member
                 (
@@ -37,7 +47,32 @@ namespace GymTestAPI.Controllers
                 dataIn.MemberType
                 );
 
-            Repo.AddMember(member);
+            return RepoService.AddMember(member);
+        }
+        [Route("Delete/{id}")]
+        [HttpDelete]
+        public bool Delete(int id)
+        {
+            RepoService.DeleteMember(id);
+            return true;
+        }
+        [Route("Update/{id}")]
+        [HttpPut]
+        public Member Update(int id,[FromBody] MemberDTO dataIn)
+        {
+            Member member = new Member
+                (
+                id,
+                dataIn.FirstName,
+                dataIn.LastName,
+                dataIn.Email,
+                dataIn.Address,
+                dataIn.Birthday,
+                dataIn.Interests,
+                dataIn.MemberType
+                );
+
+            return RepoService.UpdateMember(member);
         }
     }
 }

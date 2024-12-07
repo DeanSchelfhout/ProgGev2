@@ -39,7 +39,7 @@ namespace GymTestDL.Mappers
 		{
 			try
 			{
-				return new MemberEF(
+				return new MemberEF (
 					m.MemberId,
 					m.FirstName,
 					m.LastName,
@@ -51,7 +51,7 @@ namespace GymTestDL.Mappers
 					m.RunningSessions?.Select(RunningSessionMapper.MapToDL).ToList() ?? new List<RunningSessionMainEF>(),
 					m.Reservations?.Select(ReservationMapper.MapToDL).ToList() ?? new List<ReservationEF>(),
 					m.Programs?.Select(ProgramMapper.MapToDL).ToList() ?? new List<ProgramModelEF>(),
-                    m.MemberType.ToString());
+					m.MemberType.ToString());
 			}
 			catch (Exception)
 			{

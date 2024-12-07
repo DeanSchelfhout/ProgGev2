@@ -8,7 +8,7 @@
             Silver,
             Gold
         }
-        public Member(int memberId, string firstName, string lastName, string email, string address, DateTime birthday, List<string> interests, ICollection<CyclingSession> cyclingSessions, ICollection<RunningSessionMain> runningSessions, ICollection<Reservation> reservations, ICollection<ProgramModel> programs, memberType memberType)
+        public Member(int? memberId, string firstName, string lastName, string email, string address, DateTime birthday, List<string> interests, List<CyclingSession> cyclingSessions, List<RunningSessionMain> runningSessions, List<Reservation> reservations, List<ProgramModel> programs, memberType memberType)
         {
             MemberId = memberId;
             FirstName = firstName;
@@ -24,7 +24,7 @@
             MemberType = memberType;
         }
 
-        public Member(int memberId, string firstName, string lastName, string email, string address, DateTime birthday, List<string> interests, memberType memberType)
+        public Member(int? memberId, string firstName, string lastName, string email, string address, DateTime birthday, List<string> interests, memberType memberType)
         {
             MemberId = memberId;
             FirstName = firstName;
@@ -36,7 +36,7 @@
             MemberType = memberType;
         }
 
-        public int MemberId { get; set; }
+        public int? MemberId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
@@ -46,10 +46,10 @@
         public memberType MemberType { get; set; }
 
         // Navigation Properties
-        public ICollection<CyclingSession> CyclingSessions { get; set; }
-        public ICollection<RunningSessionMain> RunningSessions { get; set; }
-        public ICollection<Reservation> Reservations { get; set; }
-        public ICollection<ProgramModel> Programs { get; set; }
+        public List<CyclingSession> CyclingSessions { get; set; }
+        public List<RunningSessionMain> RunningSessions { get; set; }
+        public List<Reservation> Reservations { get; set; }
+        public List<ProgramModel> Programs { get; set; }
     }
 
 }

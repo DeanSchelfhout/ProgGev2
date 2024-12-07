@@ -19,7 +19,9 @@ namespace GymTestDL.Mappers
                     db.EquipmentId,
                     db.TimeSlotId,
                     db.Date,
-                    db.MemberId
+                    db.MemberId,
+                    db.TimeSlot != null ? TimeSlotMapper.MapToBL(db.TimeSlot) : new TimeSlot(),
+                    db.Equipment != null ? EquipmentMapper.MapToBL(db.Equipment) : new Equipment()
                     );
             }
             catch (Exception)
@@ -36,7 +38,9 @@ namespace GymTestDL.Mappers
                     r.EquipmentId,
                     r.TimeSlotId,
                     r.Date,
-                    r.MemberId
+                    r.MemberId,
+                    r.Timeslot != null? TimeSlotMapper.MapToDL(r.Timeslot) : new TimeSlotEF(),
+                    r.Equipment != null ? EquipmentMapper.MapToDL(r.Equipment) : new EquipmentEF()
                    );
             }
             catch (Exception)

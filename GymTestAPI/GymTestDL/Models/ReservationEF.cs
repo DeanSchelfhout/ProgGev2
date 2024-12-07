@@ -4,13 +4,15 @@ namespace GymTestDL.Models
 {
     public class ReservationEF
     {
-        public ReservationEF(int reservationId, int equipmentId, int timeSlotId, DateTime date, int memberId)
+        public ReservationEF(int reservationId, int equipmentId, int timeSlotId, DateTime date, int memberId, TimeSlotEF timeslot,EquipmentEF equipment)
         {
             ReservationId = reservationId;
             EquipmentId = equipmentId;
             TimeSlotId = timeSlotId;
             Date = date;
             MemberId = memberId;
+            TimeSlot = timeslot;
+            Equipment = equipment;
         }
         [Key]
         public int ReservationId { get; set; }

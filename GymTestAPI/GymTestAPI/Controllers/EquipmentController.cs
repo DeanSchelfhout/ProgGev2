@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using GymTestAPI.DTO;
+using GymTestBL.Models;
+using GymTestBL.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GymTestAPI.Controllers
@@ -7,10 +10,38 @@ namespace GymTestAPI.Controllers
     [ApiController]
     public class EquipmentController : ControllerBase
     {
-        [HttpGet]
-        public string GetAll()
+        EquipmentService RepoService;
+        public EquipmentController(EquipmentService equipmentService)
         {
-            return "fuck you maite";
+            RepoService = equipmentService;
+        }
+
+        [Route("Add")]
+        [HttpPost]
+        public Equipment Add([FromBody] Equipment dataIn)
+        {
+            Equipment equipment = new Equipment
+                (
+                dataIn.EquipmentId,
+                dataIn.DeviceType,
+                dataIn.IsInService
+                );
+
+            return RepoService.AddEquipment(equipment);
+        }
+        [Route("Delete/{id}")]
+        [HttpDelete]
+        public bool Delete(int id)
+        {
+            RepoService.DeleteEquipment(id);
+            return true;
+        }
+        [Route("ToggleService/{id}")]
+        [HttpPut]
+        public bool ToggleService(int id)
+        {
+            RepoService.ToggleInService(id);
+            return true;
         }
     }
 }
