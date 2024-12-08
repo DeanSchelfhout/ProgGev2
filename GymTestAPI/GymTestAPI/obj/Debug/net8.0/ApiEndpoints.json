@@ -105,6 +105,42 @@
   },
   {
     "ContainingType": "GymTestAPI.Controllers.MemberController",
+    "Method": "GetCyclingSessionMonthly",
+    "RelativePath": "api/Member/CyclingSessionMonthly/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "month",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[GymTestAPI.DTO.CyclingSessionMonthDTO, GymTestAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.MemberController",
     "Method": "Delete",
     "RelativePath": "api/Member/Delete/{id}",
     "HttpMethod": "DELETE",

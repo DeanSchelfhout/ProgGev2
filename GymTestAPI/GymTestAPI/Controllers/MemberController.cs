@@ -16,7 +16,7 @@ namespace GymTestAPI.Controllers
     public class MemberController : ControllerBase
     {
         MemberService RepoService;
-        public MemberController(MemberService memberService) 
+        public MemberController(MemberService memberService)
         {
             RepoService = memberService;
         }
@@ -32,12 +32,12 @@ namespace GymTestAPI.Controllers
         [HttpGet]
         public List<Member> GetAll()
         {
-           return RepoService.GetAllMembers();
+            return RepoService.GetAllMembers();
         }
 
         [Route("Add")]
         [HttpPost]
-        public Member Add([FromBody] MemberDTO dataIn) 
+        public Member Add([FromBody] MemberDTO dataIn)
         {
             Member member = new Member
                 (
@@ -62,7 +62,7 @@ namespace GymTestAPI.Controllers
         }
         [Route("Update/{id}")]
         [HttpPut]
-        public Member Update(int id,[FromBody] MemberDTO dataIn)
+        public Member Update(int id, [FromBody] MemberDTO dataIn)
         {
             Member member = new Member
                 (
@@ -80,7 +80,7 @@ namespace GymTestAPI.Controllers
         }
         [Route("GetSessions/{id}")]
         [HttpGet]
-        public SessionsDTO GetSessions(int id,int month,int year)
+        public SessionsDTO GetSessions(int id, int month, int year)
         {
             Member member = RepoService.GetMember(id);
             SessionsDTO sessions = new SessionsDTO();
@@ -109,11 +109,11 @@ namespace GymTestAPI.Controllers
             {
                 return NotFound(new { message = "This member doesn't have any sessions" });
             }
-            else 
+            else
             {
 
                 List<SessionCountByMonthDTO> sessionCountByMonthList = new List<SessionCountByMonthDTO>();
-                for (int i = 0; i < 12; i++)
+                for (int i = 1; i < 13; i++)
                 {
                     SessionCountByMonthDTO sessionCountByMonth = new SessionCountByMonthDTO();
                     int counter = 0;
@@ -155,7 +155,7 @@ namespace GymTestAPI.Controllers
             {
 
                 List<SessionCountByMonthDetailedDTO> sessionCountByMonthList = new List<SessionCountByMonthDetailedDTO>();
-                for (int i = 0; i < 12; i++)
+                for (int i = 1; i < 13; i++)
                 {
                     SessionCountByMonthDetailedDTO sessionCountByMonth = new SessionCountByMonthDetailedDTO();
                     int runningCounter = 0;
@@ -235,6 +235,67 @@ namespace GymTestAPI.Controllers
                 throw new Exception("This member doesn't have any sessions");
             }
             return sessionsStatistics;
+        }
+        [Route("CyclingSessionMonthly/{id}")]
+        [HttpGet]
+        public List<CyclingSessionMonthDTO> GetCyclingSessionMonthly(int id, int month, int year)
+        {
+            Member member = RepoService.GetMember(id);
+            List<CyclingSessionMonthDTO> cyclingSessionsListWithMonthList = new List<CyclingSessionMonthDTO>();
+            if (member.CyclingSessions != null)
+            {
+                for (int i = 1; i < 13; i++)
+                {
+                    List<CyclingSessionDTO> cyclingSessionsList = new List<CyclingSessionDTO>();
+                    CyclingSessionMonthDTO cyclingSessionListWithMonth = new CyclingSessionMonthDTO();
+                    cyclingSessionListWithMonth.Month = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i);
+                    for (int j = 0; j < member.CyclingSessions.Count; j++)
+                    {
+                        if (member.CyclingSessions[j].Date.Month == i && member.CyclingSessions[j].Date.Year == year)
+                        {
+                            CyclingSessionDTO cyclingSession = new CyclingSessionDTO
+                            {
+                                CyclingSessionId = member.CyclingSessions[j].CyclingSessionId,
+                                AvgCadence = member.CyclingSessions[j].AvgCadence,
+                                MaxCadence = member.CyclingSessions[j].MaxCadence,
+                                AvgWatt = member.CyclingSessions[j].AvgWatt,
+                                MaxWatt = member.CyclingSessions[j].MaxWatt,
+                                Comment = member.CyclingSessions[j].Comment,
+                                Date = member.CyclingSessions[j].Date,
+                                Duration = member.CyclingSessions[j].Duration,
+                                MemberId = member.CyclingSessions[j].MemberId,
+                                TrainingType = member.CyclingSessions[j].TrainingType
+                            };
+
+                            TimeSpan timeSpan = new TimeSpan(1, 30, 0);
+                            if (cyclingSession.AvgWatt < 150 && cyclingSession.Duration < timeSpan)
+                            {
+                                cyclingSession.Impact = "Low";
+                            }
+                            if (cyclingSession.AvgWatt < 150 && cyclingSession.Duration > timeSpan)
+                            {
+                                cyclingSession.Impact = "Medium";
+                            }
+                            if (cyclingSession.AvgWatt > 150 && cyclingSession.AvgWatt < 200)
+                            {
+                                cyclingSession.Impact = "Medium";
+                            }
+                            if (cyclingSession.AvgWatt > 200)
+                            {
+                                cyclingSession.Impact = "High";
+                            }
+                            cyclingSessionsList.Add(cyclingSession);
+                            cyclingSessionListWithMonth.CyclingSessionDTO = cyclingSessionsList;
+                        }
+                        cyclingSessionsListWithMonthList.Add(cyclingSessionListWithMonth);
+                    }
+                }
+                return cyclingSessionsListWithMonthList;
+            }
+            else
+            {
+                throw new Exception("This member doesn't have any cyclingSessions");
+            }
         }
     }
 }
