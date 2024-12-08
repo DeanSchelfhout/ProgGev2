@@ -177,6 +177,110 @@
   },
   {
     "ContainingType": "GymTestAPI.Controllers.MemberController",
+    "Method": "GetSessions",
+    "RelativePath": "api/Member/GetSessions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "month",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GymTestAPI.DTO.SessionsDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.MemberController",
+    "Method": "GetSessionsStatistics",
+    "RelativePath": "api/Member/GetSessionsStatistics/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GymTestAPI.DTO.SessionsStatisticsDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.MemberController",
+    "Method": "GetTotalSessionCount",
+    "RelativePath": "api/Member/SessionsCount/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.MemberController",
+    "Method": "GetTotalSessionCountDetailed",
+    "RelativePath": "api/Member/SessionsCountDetailed/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.MemberController",
     "Method": "Update",
     "RelativePath": "api/Member/Update/{id}",
     "HttpMethod": "PUT",
@@ -208,15 +312,78 @@
   },
   {
     "ContainingType": "GymTestAPI.Controllers.ProgramController",
-    "Method": "GetAll",
-    "RelativePath": "api/Program",
-    "HttpMethod": "GET",
+    "Method": "Add",
+    "RelativePath": "api/Program/Add",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "dataIn",
+        "Type": "GymTestBL.Models.ProgramModel",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "GymTestBL.Models.ProgramModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.ProgramController",
+    "Method": "Delete",
+    "RelativePath": "api/Program/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.ProgramController",
+    "Method": "Update",
+    "RelativePath": "api/Program/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dataIn",
+        "Type": "GymTestBL.Models.ProgramModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GymTestBL.Models.ProgramModel",
         "MediaTypes": [
           "text/plain",
           "application/json",

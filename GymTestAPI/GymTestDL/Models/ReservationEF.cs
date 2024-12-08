@@ -4,6 +4,7 @@ namespace GymTestDL.Models
 {
     public class ReservationEF
     {
+        public ReservationEF() { }
         public ReservationEF(int reservationId, int equipmentId, int timeSlotId, DateTime date, int memberId, TimeSlotEF timeslot,EquipmentEF equipment)
         {
             ReservationId = reservationId;

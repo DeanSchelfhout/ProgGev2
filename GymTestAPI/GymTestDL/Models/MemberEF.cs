@@ -6,9 +6,6 @@ namespace GymTestDL.Models
 {
     public class MemberEF
     {
-        private List<string> list;
-        private string v;
-
         public MemberEF()
         {
         }

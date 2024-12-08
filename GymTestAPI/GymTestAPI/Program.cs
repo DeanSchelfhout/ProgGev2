@@ -28,6 +28,8 @@ namespace GymTestAPI
             builder.Services.AddScoped<MemberService>();
             builder.Services.AddScoped<IEquipmentRepository, EquipmentRepositoryEF>();
             builder.Services.AddScoped<EquipmentService>();
+            builder.Services.AddScoped<IProgramRepository, ProgramRepositoryEF>();
+            builder.Services.AddScoped<ProgramService>();
 
 
             // Voeg hier de JsonOptions toe om circulaire referenties te ondersteunen
