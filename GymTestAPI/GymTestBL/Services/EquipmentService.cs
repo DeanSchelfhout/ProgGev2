@@ -41,6 +41,18 @@ namespace GymTestBL.Services
                 throw new Exception("AddEquipment", ex);
             }
         }
+        public List<Equipment> GetAllEquipment()
+        {
+            try
+            {
+                return _equipmentRepository.GetAll();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("GetAllEquipment", ex);
+            }
+        }
         public bool ToggleInService(int id)
         {
             try

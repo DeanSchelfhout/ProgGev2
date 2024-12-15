@@ -4,7 +4,7 @@ namespace GymTestBL.Models
 {
     public class RunningSessionMain
     {
-        public RunningSessionMain(int runningSessionId, DateTime date, int memberId, TimeSpan duration, float avgSpeed, List<RunningSessionDetail> details)
+        public RunningSessionMain(int runningSessionId, DateTime date, int memberId, TimeSpan duration, float avgSpeed, RunningSessionDetail details)
         {
             RunningSessionId = runningSessionId;
             Date = date;
@@ -13,13 +13,12 @@ namespace GymTestBL.Models
             AvgSpeed = avgSpeed;
             Details = details;
         }
-        [Key]
         public int RunningSessionId { get; set; }
         public DateTime Date { get; set; }
         public int MemberId { get; set; }
         public TimeSpan Duration { get; set; }
         public float AvgSpeed { get; set; }
-        public List<RunningSessionDetail> Details { get; set; }
+        public RunningSessionDetail Details { get; set; }
     }
 
 }

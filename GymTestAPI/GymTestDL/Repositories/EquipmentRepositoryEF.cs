@@ -2,6 +2,7 @@
 using GymTestBL.Models;
 using GymTestDL.Mappers;
 using GymTestDL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,24 +52,49 @@ namespace GymTestDL.Repositories
                 throw new Exception("AddEquipment", ex);
             }
         }
+        public List<Equipment> GetAll()
+        {
+            try
+            {
+                return _context.Equipment
+                    .Select(e => EquipmentMapper.MapToBL(e))
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("GetAllMembers", ex);
+            }
+        }
         public bool ToggleInService(int id)
         {
             try
             {
                 var equipmentDB = _context.Equipment.Find(id);
 
-                if (equipmentDB == null) { throw new Exception("ToggleEquipment - Equipment not found"); }
+                if (equipmentDB == null)
+                {
+                    throw new Exception("ToggleEquipment - Equipment is null.");
+                }
 
-                var equipment = equipmentDB;
-                equipment.IsInService = !equipment.IsInService;
+                equipmentDB.IsInService = !equipmentDB.IsInService;
 
-                _context.Entry(equipmentDB).CurrentValues.SetValues(equipment);
+                if (equipmentDB.IsInService)
+                {
+                    var reservations = _context.Reservations
+                        .Where(r => r.EquipmentId == id)
+                        .ToList();
+
+                    if (reservations.Any())
+                    {
+                        _context.Reservations.RemoveRange(reservations); //delete alle reservations met equipment, mss nog aanpassen naar update?
+                    }
+                }
+
                 _context.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-
                 throw new Exception("ToggleEquipment", ex);
             }
         }

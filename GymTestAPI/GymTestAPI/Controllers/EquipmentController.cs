@@ -16,6 +16,13 @@ namespace GymTestAPI.Controllers
             RepoService = equipmentService;
         }
 
+        [Route("GetAll")]
+        [HttpGet]
+        public List<Equipment> GetEquipment()
+        {
+            return RepoService.GetAllEquipment();
+        }
+
         [Route("Add")]
         [HttpPost]
         public Equipment Add([FromBody] Equipment dataIn)

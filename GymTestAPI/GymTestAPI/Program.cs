@@ -24,13 +24,21 @@ namespace GymTestAPI
             });
 
             builder.Services.AddDbContext<GymTestContext>();
+
             builder.Services.AddScoped<IMemberRepository, MemberRepositoryEF>();
             builder.Services.AddScoped<MemberService>();
+
             builder.Services.AddScoped<IEquipmentRepository, EquipmentRepositoryEF>();
             builder.Services.AddScoped<EquipmentService>();
+
             builder.Services.AddScoped<IProgramRepository, ProgramRepositoryEF>();
             builder.Services.AddScoped<ProgramService>();
 
+            builder.Services.AddScoped<IRunningSessionRepository, RunningSessionRepositoryEF>();
+            builder.Services.AddScoped<RunningSessionService>();
+
+            builder.Services.AddScoped<IReservationRepository, ReservationRepositoryEF>();
+            builder.Services.AddScoped<ReservationService>();
 
             // Voeg hier de JsonOptions toe om circulaire referenties te ondersteunen
             builder.Services.AddControllers();

@@ -2,6 +2,19 @@
 {
     public class Reservation
     {
+        public Reservation()
+        {
+        }
+
+        public Reservation(int reservationId, int equipmentId, int timeSlotId, DateTime date, int memberId)
+        {
+            ReservationId = reservationId;
+            EquipmentId = equipmentId;
+            TimeSlotId = timeSlotId;
+            Date = date;
+            MemberId = memberId;
+        }
+
         public Reservation(int reservationId, int equipmentId, int timeSlotId, DateTime date, int memberId,TimeSlot timeslot, Equipment equipment)
         {
             ReservationId = reservationId;

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GymTestDL.Mappers
 {
-    public class CyclingSessionMapper
+    public static class CyclingSessionMapper
     {
         public static CyclingSession MapToBL(CyclingSessionEF db)
         {

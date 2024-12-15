@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GymTestDL.Mappers
 {
-    public class RunningSessionMapper
+    public static class RunningSessionMapper
     {
         public static RunningSessionMain MapToBL(RunningSessionMainEF db)
         {
@@ -20,7 +20,7 @@ namespace GymTestDL.Mappers
                     db.MemberId,
                     db.Duration,
                     db.AvgSpeed,
-                    db.Details?.Select(RunningSessionDetailMapper.MapToBL).ToList() ?? new List<RunningSessionDetail>()
+                    db.Details != null ? RunningSessionDetailMapper.MapToBL(db.Details) : new RunningSessionDetail()
                     );
             }
             catch (Exception)
@@ -38,7 +38,7 @@ namespace GymTestDL.Mappers
                     r.MemberId,
                     r.Duration,
                     r.AvgSpeed,
-                    r.Details?.Select(RunningSessionDetailMapper.MapToDL).ToList() ?? new List<RunningSessionDetailEF>()
+                    r.Details != null ? RunningSessionDetailMapper.MapToDL(r.Details) : new RunningSessionDetailEF()
                    );
             }
             catch (Exception)

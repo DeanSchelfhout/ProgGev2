@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GymTestDL.Mappers
 {
-    public class TimeSlotMapper
+    public static class TimeSlotMapper
     {
         public static TimeSlot MapToBL(TimeSlotEF db)
         {

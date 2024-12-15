@@ -2,18 +2,22 @@
 {
     public class RunningSessionDetail
     {
-        public RunningSessionDetail(int runningSessionId, int seqNr, TimeSpan intervalTime, float intervalSpeed)
+        public RunningSessionDetail()
+        {
+        }
+
+        public RunningSessionDetail(int runningSessionId, int seqNr, List<TimeSpan> intervalTimes, List<float> intervalSpeeds)
         {
             RunningSessionId = runningSessionId;
             SeqNr = seqNr;
-            IntervalTime = intervalTime;
-            IntervalSpeed = intervalSpeed;
+            IntervalTimes = intervalTimes;
+            IntervalSpeeds = intervalSpeeds;
         }
 
         public int RunningSessionId { get; set; }
         public int SeqNr { get; set; }
-        public TimeSpan IntervalTime { get; set; }
-        public float IntervalSpeed { get; set; }
+        public List<TimeSpan> IntervalTimes { get; set; }
+        public List<float> IntervalSpeeds { get; set; }
     }
 
 }

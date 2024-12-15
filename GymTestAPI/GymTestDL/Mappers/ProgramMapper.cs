@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GymTestDL.Mappers
 {
-    public class ProgramMapper
+    public static class ProgramMapper
     {
         public static ProgramModel MapToBL(ProgramModelEF db)
         {

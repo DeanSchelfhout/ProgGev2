@@ -87,11 +87,11 @@ namespace GymTestAPI.Controllers
 
             if (member.CyclingSessions != null)
             {
-                sessions.CyclingSessions = (List<CyclingSession>)member.CyclingSessions.Where(m => m.Date.Month == month && m.Date.Year == year).OrderBy(m => m.Date);
+                sessions.CyclingSessions = (List<CyclingSession>)member.CyclingSessions.Where(m => m.Date.Month == month && m.Date.Year == year).OrderBy(m => m.Date).ToList();
             }
             if (member.RunningSessions != null)
             {
-                sessions.runningSessions = (List<RunningSessionMain>)member.RunningSessions.Where(m => m.Date.Month == month && m.Date.Year == year).OrderBy(m => m.Date);
+                sessions.runningSessions = (List<RunningSessionMain>)member.RunningSessions.Where(m => m.Date.Month == month && m.Date.Year == year).OrderBy(m => m.Date).ToList();
             }
             if (sessions == null)
             {
@@ -200,9 +200,9 @@ namespace GymTestAPI.Controllers
             if (member.CyclingSessions != null || member.RunningSessions != null)
             {
                 var shortestCyclingSession = member.CyclingSessions.OrderBy(m => m.Duration).FirstOrDefault();
-                var longestCyclingSession = member.CyclingSessions.OrderBy(m => m.Duration).LastOrDefault();
+                var longestCyclingSession = member.CyclingSessions.OrderByDescending(m => m.Duration).FirstOrDefault();
                 var shortestRunningSession = member.RunningSessions.OrderBy(m => m.Duration).FirstOrDefault();
-                var longestRunningSession = member.RunningSessions.OrderBy(m => m.Duration).LastOrDefault();
+                var longestRunningSession = member.RunningSessions.OrderByDescending(m => m.Duration).FirstOrDefault();
 
                 if (shortestCyclingSession != null && shortestRunningSession != null)
                 {
@@ -215,17 +215,17 @@ namespace GymTestAPI.Controllers
                 if (shortestCyclingSession == null) sessionsStatistics.ShortestSession = shortestRunningSession;
                 if (longestCyclingSession == null) sessionsStatistics.LongestSession = longestRunningSession;
                 if (shortestRunningSession == null) sessionsStatistics.ShortestSession = shortestCyclingSession;
-                if (longestCyclingSession == null) sessionsStatistics.LongestSession = longestCyclingSession;
+                if (longestRunningSession == null) sessionsStatistics.LongestSession = longestCyclingSession;
 
                 sessionsStatistics.SessionCount = member.CyclingSessions.Count + member.RunningSessions.Count;
                 int totalHourCount = 0;
                 for (int i = 0; i < member.RunningSessions.Count; i++)
                 {
-                    totalHourCount += Convert.ToInt32(member.RunningSessions[i].Duration);
+                    totalHourCount += Convert.ToInt32(member.RunningSessions[i].Duration.TotalHours);
                 }
                 for (int i = 0; i < member.CyclingSessions.Count; i++)
                 {
-                    totalHourCount += Convert.ToInt32(member.CyclingSessions[i].Duration);
+                    totalHourCount += Convert.ToInt32(member.CyclingSessions[i].Duration.TotalHours);
                 }
                 sessionsStatistics.TotalHourCount = totalHourCount;
                 sessionsStatistics.AvgSessionTime = totalHourCount / (member.CyclingSessions.Count + member.RunningSessions.Count);
@@ -238,7 +238,7 @@ namespace GymTestAPI.Controllers
         }
         [Route("CyclingSessionMonthly/{id}")]
         [HttpGet]
-        public List<CyclingSessionMonthDTO> GetCyclingSessionMonthly(int id, int month, int year)
+        public List<CyclingSessionMonthDTO> GetCyclingSessionMonthly(int id, int year)
         {
             Member member = RepoService.GetMember(id);
             List<CyclingSessionMonthDTO> cyclingSessionsListWithMonthList = new List<CyclingSessionMonthDTO>();
@@ -285,10 +285,10 @@ namespace GymTestAPI.Controllers
                                 cyclingSession.Impact = "High";
                             }
                             cyclingSessionsList.Add(cyclingSession);
-                            cyclingSessionListWithMonth.CyclingSessionDTO = cyclingSessionsList;
                         }
-                        cyclingSessionsListWithMonthList.Add(cyclingSessionListWithMonth);
                     }
+                    cyclingSessionListWithMonth.CyclingSessionDTO = cyclingSessionsList;
+                    cyclingSessionsListWithMonthList.Add(cyclingSessionListWithMonth);
                 }
                 return cyclingSessionsListWithMonthList;
             }

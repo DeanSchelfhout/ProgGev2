@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GymTestDL.Mappers
 {
-    public class EquipmentMapper
+    public static class EquipmentMapper
     {
         public static Equipment MapToBL(EquipmentEF db)
         {

@@ -10,6 +10,7 @@ namespace GymTestBL.Interfaces
     public interface IEquipmentRepository
     {
         bool DeleteEquipment(int Id);
+        List<Equipment> GetAll();
         Equipment AddEquipment(Equipment equipment);
         bool ToggleInService(int Id);
     }

@@ -13,7 +13,6 @@ namespace GymTestBL.Models
             MaxMembers = maxMembers;
         }
 
-        [Key]
         public int ProgramCode { get; set; }
         public string Name { get; set; }
         public string Target { get; set; }

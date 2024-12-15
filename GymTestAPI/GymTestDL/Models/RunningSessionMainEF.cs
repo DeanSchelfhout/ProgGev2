@@ -5,7 +5,7 @@ namespace GymTestDL.Models
     public class RunningSessionMainEF
     {
         public RunningSessionMainEF() { }
-        public RunningSessionMainEF(int runningSessionId, DateTime date, int memberId, TimeSpan duration, float avgSpeed, ICollection<RunningSessionDetailEF> details)
+        public RunningSessionMainEF(int runningSessionId, DateTime date, int memberId, TimeSpan duration, float avgSpeed,RunningSessionDetailEF details)
         {
             RunningSessionId = runningSessionId;
             Date = date;
@@ -24,7 +24,7 @@ namespace GymTestDL.Models
 
         // Navigation Properties
         public MemberEF Member { get; set; }
-        public ICollection<RunningSessionDetailEF> Details { get; set; }
+        public RunningSessionDetailEF Details { get; set; }
     }
 
 }

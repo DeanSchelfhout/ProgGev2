@@ -53,6 +53,26 @@
   },
   {
     "ContainingType": "GymTestAPI.Controllers.EquipmentController",
+    "Method": "GetEquipment",
+    "RelativePath": "api/Equipment/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[GymTestBL.Models.Equipment, GymTestBL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.EquipmentController",
     "Method": "ToggleService",
     "RelativePath": "api/Equipment/ToggleService/{id}",
     "HttpMethod": "PUT",
@@ -115,11 +135,6 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
-      },
-      {
-        "Name": "month",
-        "Type": "System.Int32",
-        "IsRequired": false
       },
       {
         "Name": "year",
@@ -431,15 +446,104 @@
   },
   {
     "ContainingType": "GymTestAPI.Controllers.ReservationController",
-    "Method": "GetAll",
-    "RelativePath": "api/Reservation",
+    "Method": "Add",
+    "RelativePath": "api/Reservation/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dataIn",
+        "Type": "GymTestAPI.DTO.ReservationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GymTestBL.Models.Reservation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.ReservationController",
+    "Method": "Delete",
+    "RelativePath": "api/Reservation/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.ReservationController",
+    "Method": "Update",
+    "RelativePath": "api/Reservation/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dataIn",
+        "Type": "GymTestAPI.DTO.ReservationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GymTestBL.Models.Reservation",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.RunningSessionController",
+    "Method": "Get",
+    "RelativePath": "api/RunningSession/GetRunningSession/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.String",
+        "Type": "GymTestBL.Models.RunningSessionMain",
         "MediaTypes": [
           "text/plain",
           "application/json",
