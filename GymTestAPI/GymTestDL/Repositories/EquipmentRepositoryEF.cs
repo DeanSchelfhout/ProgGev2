@@ -80,9 +80,7 @@ namespace GymTestDL.Repositories
 
                 if (equipmentDB.IsInService)
                 {
-                    var reservations = _context.Reservations
-                        .Where(r => r.EquipmentId == id)
-                        .ToList();
+                    var reservations = _context.Reservations.Where(r => r.EquipmentId == id).ToList();
 
                     if (reservations.Any())
                     {

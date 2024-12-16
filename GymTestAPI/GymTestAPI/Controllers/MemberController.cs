@@ -158,35 +158,36 @@ namespace GymTestAPI.Controllers
                 for (int i = 1; i < 13; i++)
                 {
                     SessionCountByMonthDetailedDTO sessionCountByMonth = new SessionCountByMonthDetailedDTO();
-                    int runningCounter = 0;
-                    int cyclingCounter = 0;
-                    for (int j = 0; j < member.RunningSessions.Count; j++)
-                    {
-                        if (member.RunningSessions[j].Date.Month == i && member.RunningSessions[j].Date.Year == year)
-                        {
-                            runningCounter++;
-                        }
-                    }
+                    int fun = 0;
+                    int endurance = 0;
+                    int interval = 0;
+                    int recovery = 0;
+
                     for (int j = 0; j < member.CyclingSessions.Count; j++)
                     {
-                        if (member.CyclingSessions[j].Date.Month == i && member.CyclingSessions[j].Date.Year == year)
+                        switch (member.CyclingSessions[i].TrainingType.ToLower())
                         {
-                            cyclingCounter++;
+                            case "fun":
+                                fun++;
+                                break;
+                            case "endurance":
+                                endurance++;
+                                break;
+                            case "interval":
+                                interval++;
+                                break;
+                            case "recovery":
+                                recovery++;
+                                break;
                         }
                     }
-                    if (runningCounter + cyclingCounter != 0)
-                    {
-                        sessionCountByMonth.Month = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i);
-                        if (runningCounter != 0)
-                        {
-                            sessionCountByMonth.RunningSessionCount = runningCounter;
-                        }
-                        if (cyclingCounter != 0)
-                        {
-                            sessionCountByMonth.CyclingSessionCount = cyclingCounter;
-                        }
-                        sessionCountByMonthList.Add(sessionCountByMonth);
-                    }
+                    sessionCountByMonth.FunCount = fun;
+                    sessionCountByMonth.EnduranceCount = endurance;
+                    sessionCountByMonth.EnduranceCount = interval;
+                    sessionCountByMonth.RecoveryCount = recovery;
+                    sessionCountByMonth.Month = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i);
+
+                    sessionCountByMonthList.Add(sessionCountByMonth);
                 }
                 return Ok(sessionCountByMonthList);
             }
