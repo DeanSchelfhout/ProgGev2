@@ -283,7 +283,7 @@
               "RelativeDocumentMoniker": "GymTestAPI\\Controllers\\MemberController.cs",
               "ToolTip": "C:\\Users\\schel\\Documents\\GitHub\\ProgGev2\\GymTestAPI\\GymTestAPI\\Controllers\\MemberController.cs",
               "RelativeToolTip": "GymTestAPI\\Controllers\\MemberController.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAAwMcAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAYwKUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T08:15:36.352Z",
               "EditorCaption": ""
@@ -298,8 +298,7 @@
               "RelativeToolTip": "GymTestAPI\\Controllers\\ProgramController.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAAwDIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T08:16:13.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T08:16:13.193Z"
             },
             {
               "$type": "Document",
@@ -311,8 +310,7 @@
               "RelativeToolTip": "GymTestAPI\\DTO\\SessionCountByMonthDetailedDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T04:31:00.588Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T04:31:00.588Z"
             },
             {
               "$type": "Document",

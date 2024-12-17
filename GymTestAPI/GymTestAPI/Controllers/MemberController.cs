@@ -182,20 +182,23 @@ namespace GymTestAPI.Controllers
 
                     for (int j = 0; j < member.CyclingSessions.Count; j++)
                     {
-                        switch (member.CyclingSessions[i].TrainingType.ToLower())
+                        if (member.CyclingSessions[j].Date.Month == i && member.CyclingSessions[i].Date.Year == year)
                         {
-                            case "fun":
-                                fun++;
-                                break;
-                            case "endurance":
-                                endurance++;
-                                break;
-                            case "interval":
-                                interval++;
-                                break;
-                            case "recovery":
-                                recovery++;
-                                break;
+                            switch (member.CyclingSessions[i].TrainingType.ToLower())
+                            {
+                                case "fun":
+                                    fun++;
+                                    break;
+                                case "endurance":
+                                    endurance++;
+                                    break;
+                                case "interval":
+                                    interval++;
+                                    break;
+                                case "recovery":
+                                    recovery++;
+                                    break;
+                            }
                         }
                     }
                     sessionCountByMonth.CyclingSessionCount = cyclingSessionCount;
