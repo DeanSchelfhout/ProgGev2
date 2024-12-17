@@ -219,17 +219,20 @@ namespace GymTestAPI.Controllers
                 if (longestRunningSession == null) sessionsStatistics.LongestSession = longestCyclingSession;
 
                 sessionsStatistics.SessionCount = member.CyclingSessions.Count + member.RunningSessions.Count;
-                int totalHourCount = 0;
+                long totalTicks = 0;
+
                 for (int i = 0; i < member.RunningSessions.Count; i++)
                 {
-                    totalHourCount += Convert.ToInt32(member.RunningSessions[i].Duration.TotalHours);
+                    totalTicks += member.RunningSessions[i].Duration.Ticks;
                 }
                 for (int i = 0; i < member.CyclingSessions.Count; i++)
                 {
-                    totalHourCount += Convert.ToInt32(member.CyclingSessions[i].Duration.TotalHours);
+                    totalTicks += member.CyclingSessions[i].Duration.Ticks;
                 }
-                sessionsStatistics.TotalHourCount = totalHourCount;
-                sessionsStatistics.AvgSessionTime = totalHourCount / (member.CyclingSessions.Count + member.RunningSessions.Count);
+                sessionsStatistics.TotalHourCount = new TimeSpan(totalTicks);
+                long averageTicks = 0;
+                averageTicks = totalTicks / (member.CyclingSessions.Count + member.RunningSessions.Count);
+                sessionsStatistics.AvgSessionTime = new TimeSpan(averageTicks);
             }
             else
             {
