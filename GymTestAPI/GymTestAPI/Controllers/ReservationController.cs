@@ -20,7 +20,6 @@ namespace GymTestAPI.Controllers
         [HttpPost]
         public Reservation Add([FromBody] ReservationDTO dataIn)
         {
-
             Reservation reservation = new Reservation();
             reservation.ReservationId = 0;
             reservation.EquipmentId = dataIn.EquipmentId;
