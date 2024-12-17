@@ -162,6 +162,23 @@ namespace GymTestAPI.Controllers
                     int endurance = 0;
                     int interval = 0;
                     int recovery = 0;
+                    int cyclingSessionCount = 0;
+                    int runningSessionCount = 0;
+
+                    for (int j = 0; j < member.RunningSessions.Count; j++)
+                    {
+                        if (member.RunningSessions[j].Date.Month == i && member.RunningSessions[j].Date.Year == year)
+                        {
+                            runningSessionCount++;
+                        }
+                    }
+                    for (int j = 0; j < member.CyclingSessions.Count; j++)
+                    {
+                        if (member.CyclingSessions[j].Date.Month == i && member.CyclingSessions[j].Date.Year == year)
+                        {
+                            cyclingSessionCount++;
+                        }
+                    }
 
                     for (int j = 0; j < member.CyclingSessions.Count; j++)
                     {
@@ -181,6 +198,8 @@ namespace GymTestAPI.Controllers
                                 break;
                         }
                     }
+                    sessionCountByMonth.CyclingSessionCount = cyclingSessionCount;
+                    sessionCountByMonth.RunningSessionCount = runningSessionCount;
                     sessionCountByMonth.FunCount = fun;
                     sessionCountByMonth.EnduranceCount = endurance;
                     sessionCountByMonth.EnduranceCount = interval;
