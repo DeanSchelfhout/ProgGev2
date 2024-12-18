@@ -16,7 +16,7 @@ namespace GymTestAPI
             {
                 options.AddPolicy("AllowReactApp", policy =>
                 {
-                    policy.WithOrigins("http://localhost:5182") // Gebruik de juiste URL (http of https)
+                    policy.WithOrigins("http://localhost:5173") // Gebruik de juiste URL (http of https)
 
                           .AllowAnyMethod()
                           .AllowAnyHeader();

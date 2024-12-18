@@ -57,6 +57,7 @@ namespace GymTestDL.Repositories
             try
             {
                 return _context.Equipment
+                    .Where(e => e.IsInService == false)
                     .Select(e => EquipmentMapper.MapToBL(e))
                     .ToList();
             }

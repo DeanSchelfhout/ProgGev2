@@ -64,7 +64,7 @@ function Reservation() {
           >
             <option value="">Select a Timeslot</option>
             <option value="1">08:00 - 09:00</option>
-            <option value="2">09:00 - 010:00</option>
+            <option value="2">09:00 - 10:00</option>
             <option value="3">10:00 - 11:00</option>
             <option value="4">11:00 - 12:00</option>
             <option value="5">12:00 - 13:00</option>
