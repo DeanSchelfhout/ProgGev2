@@ -7,11 +7,12 @@ function Reservation() {
   const [timeslot, setTimeslot] = useState('');
   const [equipment, setEquipment] = useState('');
   const [message, setMessage] = useState('');
+  const [messageStyle, setMessageStyle] = useState(0);
 
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://localhost:7082/api/Equipment/GetAll")
+    fetch("https://localhost:7082/api/Equipment")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error(error));
@@ -19,11 +20,16 @@ function Reservation() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+  
     if (date && timeslot && equipment) {
-      const reservationData = { "equipmentId":equipment, "timeslotId":timeslot, date, "memberId":id };
-
-      fetch("https://localhost:7082/api/Reservation/Add", {
+      const reservationData = {
+        "equipmentId": equipment,
+        "timeslotId": timeslot,
+        date,
+        "memberId": id
+      };
+  
+      fetch("https://localhost:7082/api/Reservation", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -31,13 +37,27 @@ function Reservation() {
         body: JSON.stringify(reservationData),
       })
         .then((response) => response.json())
-        .then(() => setMessage("Reservation Made!"))
-        .catch(() => setMessage('Error creating reservation.'));
-
+        .then((data) => {
+          if (data.message) {
+            setMessage(data.message);
+            setMessageStyle(1);
+          } else {
+            setMessage('Reservation successfully made!');
+            setMessageStyle(0);
+          }
+        })
+        .catch(() => {
+          setMessage('An error occurred while making the reservation.');
+          setMessageStyle(1);
+        });
     } else {
       setMessage('All fields are required.');
+      setMessageStyle(1);
     }
   };
+  
+  
+  
 
   return (
     <div className="reservation-container">
@@ -53,7 +73,7 @@ function Reservation() {
             required
           />
         </div>
-
+  
         <div className="form-group">
           <label htmlFor="timeslot">Select a Timeslot:</label>
           <select
@@ -79,7 +99,7 @@ function Reservation() {
             <option value="14">21:00 - 22:00</option>
           </select>
         </div>
-
+  
         <div className="form-group">
           <label htmlFor="equipment">Select Equipment:</label>
           <select
@@ -94,13 +114,17 @@ function Reservation() {
             ))}
           </select>
         </div>
-
+  
         <button type="submit" className="submit-btn">Reserveren</button>
       </form>
-
-      {message && <p className="message">{message}</p>}
-      
-      <style jsx>{`
+  
+      {message && (
+        <p className={`message ${messageStyle === 1 ? 'error' : 'success'}`}>
+          {message}
+        </p>
+      )}
+  
+      <style>{`
         .reservation-container {
           font-family: Arial, sans-serif;
           padding: 20px;
@@ -109,36 +133,36 @@ function Reservation() {
           max-width: 400px;
           margin: auto;
         }
-
+  
         h2 {
           text-align: center;
           color: #333;
         }
-
+  
         .reservation-form {
           display: flex;
           flex-direction: column;
           gap: 15px;
         }
-
+  
         .form-group {
           display: flex;
           flex-direction: column;
         }
-
+  
         label {
           margin-bottom: 5px;
           font-weight: bold;
           color: #333;
         }
-
+  
         input, select {
           padding: 10px;
           border: 1px solid #ccc;
           border-radius: 4px;
           font-size: 14px;
         }
-
+  
         button.submit-btn {
           padding: 10px;
           background-color: #4CAF50;
@@ -149,21 +173,28 @@ function Reservation() {
           font-size: 16px;
           font-weight: bold;
         }
-
+  
         button.submit-btn:hover {
           background-color: #45a049;
         }
-
+  
         .message {
           text-align: center;
-          color: green;
           font-size: 16px;
           font-weight: bold;
           margin-top: 20px;
         }
+  
+        .message.success {
+          color: green;
+        }
+  
+        .message.error {
+          color: red;
+        }
       `}</style>
     </div>
-  );
+  );    
 }
 
 export default Reservation;

@@ -9,8 +9,14 @@ namespace GymTestBL.Interfaces
 {
     public interface IReservationRepository
     {
-        public Reservation Update(Reservation reservation);
+        public Reservation Update(Reservation reservation, Reservation reservationDB);
         public Reservation Add(Reservation reservation);
         public bool Delete(int id);
+
+        public (Reservation reservationDB, Equipment equipment, TimeSlot timeSlot,
+        List<Reservation> existingReservations, List<Reservation> equipmentReservations,
+        List<Reservation> equipmentReservationsMember, List<TimeSlot> timeslots)
+        ReservationData(Reservation reservation);
+
     }
 }

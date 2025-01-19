@@ -1,0 +1,23 @@
+# Node.js dependencies
+node_modules/
+
+# Visual Studio files
+.vs/
+.vscode/
+.idea/
+
+# User-specific files for Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore build and debug directories
+bin/
+obj/
+
+# Ignoring V2 files (if you have files or folders specifically named V2)
+V2/
+
+# Logs
+*.log

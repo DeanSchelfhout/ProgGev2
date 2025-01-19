@@ -6,7 +6,7 @@ const App = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://localhost:7082/api/Member/GetAll")
+    fetch("https://localhost:7082/api/Member")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error(error));

@@ -16,7 +16,6 @@ namespace GymTestAPI.Controllers
             RepoService = programService;
         }
 
-        [Route("Add")]
         [HttpPost]
         public ProgramModel Add([FromBody] ProgramModel dataIn)
         {
@@ -31,14 +30,14 @@ namespace GymTestAPI.Controllers
 
             return RepoService.AddProgram(programModel);
         }
-        [Route("Delete/{id}")]
+        [Route("{id}")]
         [HttpDelete]
         public bool Delete(int id)
         {
             RepoService.DeleteProgram(id);
             return true;
         }
-        [Route("Update/{id}")]
+        [Route("{id}")]
         [HttpPut]
         public ProgramModel Update(int id, [FromBody] ProgramModel dataIn)
         {

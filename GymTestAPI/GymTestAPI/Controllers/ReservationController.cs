@@ -16,27 +16,34 @@ namespace GymTestAPI.Controllers
             RepoService = reservationService;
         }
 
-        [Route("Add")]
         [HttpPost]
-        public Reservation Add([FromBody] ReservationDTO dataIn)
+        public IActionResult Add([FromBody] ReservationDTO dataIn)
         {
-            Reservation reservation = new Reservation();
-            reservation.ReservationId = 0;
-            reservation.EquipmentId = dataIn.EquipmentId;
-            reservation.MemberId = dataIn.MemberId;
-            reservation.TimeSlotId = dataIn.TimeSlotId;
-            reservation.Date = dataIn.Date;
+            try
+            {
+                Reservation reservation = new Reservation();
+                reservation.ReservationId = 0;
+                reservation.EquipmentId = dataIn.EquipmentId;
+                reservation.MemberId = dataIn.MemberId;
+                reservation.TimeSlotId = dataIn.TimeSlotId;
+                reservation.Date = dataIn.Date;
 
-            return RepoService.Add(reservation);
+                RepoService.Add(reservation);
+                return Ok(reservation);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
-        [Route("Delete/{id}")]
+        [Route("{id}")]
         [HttpDelete]
         public bool Delete(int id)
         {
             RepoService.Delete(id);
             return true;
         }
-        [Route("Update/{id}")]
+        [Route("{id}")]
         [HttpPut]
         public Reservation Update(int id, [FromBody] ReservationDTO dataIn)
         {

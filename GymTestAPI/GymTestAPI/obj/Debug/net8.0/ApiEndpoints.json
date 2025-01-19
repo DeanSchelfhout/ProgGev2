@@ -1,8 +1,28 @@
 [
   {
     "ContainingType": "GymTestAPI.Controllers.EquipmentController",
+    "Method": "GetEquipment",
+    "RelativePath": "api/Equipment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[GymTestBL.Models.Equipment, GymTestBL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.EquipmentController",
     "Method": "Add",
-    "RelativePath": "api/Equipment/Add",
+    "RelativePath": "api/Equipment",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -28,7 +48,7 @@
   {
     "ContainingType": "GymTestAPI.Controllers.EquipmentController",
     "Method": "Delete",
-    "RelativePath": "api/Equipment/Delete/{id}",
+    "RelativePath": "api/Equipment/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -53,28 +73,8 @@
   },
   {
     "ContainingType": "GymTestAPI.Controllers.EquipmentController",
-    "Method": "GetEquipment",
-    "RelativePath": "api/Equipment/GetAll",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[GymTestBL.Models.Equipment, GymTestBL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "GymTestAPI.Controllers.EquipmentController",
     "Method": "ToggleService",
-    "RelativePath": "api/Equipment/ToggleService/{id}",
+    "RelativePath": "api/Equipment/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -99,12 +99,115 @@
   },
   {
     "ContainingType": "GymTestAPI.Controllers.MemberController",
+    "Method": "GetAll",
+    "RelativePath": "api/Member",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[GymTestBL.Models.Member, GymTestBL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.MemberController",
     "Method": "Add",
-    "RelativePath": "api/Member/Add",
+    "RelativePath": "api/Member",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "dataIn",
+        "Type": "GymTestAPI.DTO.MemberDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GymTestBL.Models.Member",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.MemberController",
+    "Method": "Get",
+    "RelativePath": "api/Member/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GymTestBL.Models.Member",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.MemberController",
+    "Method": "Delete",
+    "RelativePath": "api/Member/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.MemberController",
+    "Method": "Update",
+    "RelativePath": "api/Member/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
       {
         "Name": "dataIn",
         "Type": "GymTestAPI.DTO.MemberDTO",
@@ -156,80 +259,8 @@
   },
   {
     "ContainingType": "GymTestAPI.Controllers.MemberController",
-    "Method": "Delete",
-    "RelativePath": "api/Member/Delete/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Boolean",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "GymTestAPI.Controllers.MemberController",
-    "Method": "GetAll",
-    "RelativePath": "api/Member/GetAll",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[GymTestBL.Models.Member, GymTestBL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "GymTestAPI.Controllers.MemberController",
-    "Method": "Get",
-    "RelativePath": "api/Member/GetMember/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "GymTestBL.Models.Member",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "GymTestAPI.Controllers.MemberController",
     "Method": "GetSessions",
-    "RelativePath": "api/Member/GetSessions/{id}",
+    "RelativePath": "api/Member/Sessions/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -253,32 +284,6 @@
     "ReturnTypes": [
       {
         "Type": "GymTestAPI.DTO.SessionsDTO",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "GymTestAPI.Controllers.MemberController",
-    "Method": "GetSessionsStatistics",
-    "RelativePath": "api/Member/GetSessionsStatistics/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "GymTestAPI.DTO.SessionsStatisticsDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -332,9 +337,9 @@
   },
   {
     "ContainingType": "GymTestAPI.Controllers.MemberController",
-    "Method": "Update",
-    "RelativePath": "api/Member/Update/{id}",
-    "HttpMethod": "PUT",
+    "Method": "GetSessionsStatistics",
+    "RelativePath": "api/Member/SessionsStatistics/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -342,16 +347,11 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
-      },
-      {
-        "Name": "dataIn",
-        "Type": "GymTestAPI.DTO.MemberDTO",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "GymTestBL.Models.Member",
+        "Type": "GymTestAPI.DTO.SessionsStatisticsDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -364,7 +364,7 @@
   {
     "ContainingType": "GymTestAPI.Controllers.ProgramController",
     "Method": "Add",
-    "RelativePath": "api/Program/Add",
+    "RelativePath": "api/Program",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -390,7 +390,7 @@
   {
     "ContainingType": "GymTestAPI.Controllers.ProgramController",
     "Method": "Delete",
-    "RelativePath": "api/Program/Delete/{id}",
+    "RelativePath": "api/Program/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -416,7 +416,7 @@
   {
     "ContainingType": "GymTestAPI.Controllers.ProgramController",
     "Method": "Update",
-    "RelativePath": "api/Program/Update/{id}",
+    "RelativePath": "api/Program/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -447,7 +447,7 @@
   {
     "ContainingType": "GymTestAPI.Controllers.ReservationController",
     "Method": "Add",
-    "RelativePath": "api/Reservation/Add",
+    "RelativePath": "api/Reservation",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -458,22 +458,12 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "GymTestBL.Models.Reservation",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "GymTestAPI.Controllers.ReservationController",
     "Method": "Delete",
-    "RelativePath": "api/Reservation/Delete/{id}",
+    "RelativePath": "api/Reservation/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -499,7 +489,7 @@
   {
     "ContainingType": "GymTestAPI.Controllers.ReservationController",
     "Method": "Update",
-    "RelativePath": "api/Reservation/Update/{id}",
+    "RelativePath": "api/Reservation/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -530,7 +520,7 @@
   {
     "ContainingType": "GymTestAPI.Controllers.RunningSessionController",
     "Method": "Get",
-    "RelativePath": "api/RunningSession/GetRunningSession/{id}",
+    "RelativePath": "api/RunningSession/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

@@ -16,14 +16,12 @@ namespace GymTestAPI.Controllers
             RepoService = equipmentService;
         }
 
-        [Route("GetAll")]
         [HttpGet]
         public List<Equipment> GetEquipment()
         {
             return RepoService.GetAllEquipment();
         }
 
-        [Route("Add")]
         [HttpPost]
         public Equipment Add([FromBody] Equipment dataIn)
         {
@@ -36,14 +34,14 @@ namespace GymTestAPI.Controllers
 
             return RepoService.AddEquipment(equipment);
         }
-        [Route("Delete/{id}")]
+        [Route("{id}")]
         [HttpDelete]
         public bool Delete(int id)
         {
             RepoService.DeleteEquipment(id);
             return true;
         }
-        [Route("ToggleService/{id}")]
+        [Route("{id}")]
         [HttpPut]
         public bool ToggleService(int id)
         {

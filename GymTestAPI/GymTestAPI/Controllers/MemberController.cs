@@ -21,21 +21,19 @@ namespace GymTestAPI.Controllers
             RepoService = memberService;
         }
 
-        [Route("GetMember/{id}")]
+        [Route("{id}")]
         [HttpGet]
         public Member Get(int id)
         {
             return RepoService.GetMember(id);
         }
 
-        [Route("GetAll")]
         [HttpGet]
         public List<Member> GetAll()
         {
             return RepoService.GetAllMembers();
         }
 
-        [Route("Add")]
         [HttpPost]
         public Member Add([FromBody] MemberDTO dataIn)
         {
@@ -53,14 +51,14 @@ namespace GymTestAPI.Controllers
 
             return RepoService.AddMember(member);
         }
-        [Route("Delete/{id}")]
+        [Route("{id}")]
         [HttpDelete]
         public bool Delete(int id)
         {
             RepoService.DeleteMember(id);
             return true;
         }
-        [Route("Update/{id}")]
+        [Route("{id}")]
         [HttpPut]
         public Member Update(int id, [FromBody] MemberDTO dataIn)
         {
@@ -78,7 +76,7 @@ namespace GymTestAPI.Controllers
 
             return RepoService.UpdateMember(member);
         }
-        [Route("GetSessions/{id}")]
+        [Route("Sessions/{id}")]
         [HttpGet]
         public SessionsDTO GetSessions(int id, int month, int year)
         {
@@ -214,7 +212,7 @@ namespace GymTestAPI.Controllers
                 return Ok(sessionCountByMonthList);
             }
         }
-        [Route("GetSessionsStatistics/{id}")]
+        [Route("SessionsStatistics/{id}")]
         [HttpGet]
         public SessionsStatisticsDTO GetSessionsStatistics(int id)
         {

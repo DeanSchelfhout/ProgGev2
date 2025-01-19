@@ -85,7 +85,7 @@ namespace GymTestDL.Repositories
 
                     if (reservations.Any())
                     {
-                        _context.Reservations.RemoveRange(reservations); //delete alle reservations met equipment, mss nog aanpassen naar update?
+                        _context.Reservations.RemoveRange(reservations);
                     }
                 }
 

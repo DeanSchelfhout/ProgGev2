@@ -15,7 +15,7 @@ namespace GymTestAPI.Controllers
             RepoService = runningSessionService;
         }
 
-        [Route("GetRunningSession/{id}")]
+        [Route("{id}")]
         [HttpGet]
         public RunningSessionMain Get(int id)
         {
