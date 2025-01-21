@@ -10,9 +10,9 @@ namespace GymTestBL.Interfaces
     public interface IReservationRepository
     {
         public Reservation Update(Reservation reservation, Reservation reservationDB);
-        public Reservation Add(Reservation reservation);
+        public void Add(DailyReservation dailyReservation);
         public bool Delete(int id);
-
+        public TimeSlot GetReservationTimeSlot(Reservation reservation);
         public (Reservation reservationDB, Equipment equipment, TimeSlot timeSlot,
         List<Reservation> existingReservations, List<Reservation> equipmentReservations,
         List<Reservation> equipmentReservationsMember, List<TimeSlot> timeslots)

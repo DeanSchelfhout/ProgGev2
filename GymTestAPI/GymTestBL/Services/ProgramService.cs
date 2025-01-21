@@ -15,7 +15,7 @@ namespace GymTestBL.Services
         {
             this._programRepository = programRepository;
         }
-        public bool DeleteProgram(int id)
+        public bool DeleteProgram(string id)
         {
             try
             {

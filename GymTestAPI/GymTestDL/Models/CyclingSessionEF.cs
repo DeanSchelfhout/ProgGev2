@@ -27,7 +27,7 @@ namespace GymTestDL.Models
         public float AvgCadence { get; set; }
         public float MaxCadence { get; set; }
         public string TrainingType { get; set; }
-        public string Comment { get; set; }
+        public string? Comment { get; set; }
         public int MemberId { get; set; }
 
         // Navigation Properties

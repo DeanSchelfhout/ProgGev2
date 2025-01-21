@@ -21,7 +21,7 @@ namespace GymTestAPI.Controllers
         {
             ProgramModel programModel = new ProgramModel
                 (
-                0,
+                dataIn.ProgramCode,
                 dataIn.Name,
                 dataIn.Target,
                 dataIn.StartDate,
@@ -39,7 +39,7 @@ namespace GymTestAPI.Controllers
         }
         [Route("{id}")]
         [HttpPut]
-        public ProgramModel Update(int id, [FromBody] ProgramModel dataIn)
+        public ProgramModel Update(string id, [FromBody] ProgramModel dataIn)
         {
             ProgramModel programModel = new ProgramModel
                 (

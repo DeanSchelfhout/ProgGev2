@@ -28,8 +28,13 @@ namespace GymTestBL.Services
                 throw new Exception("DeleteReservation", ex);
             }
         }
-        public Reservation Add(Reservation reservation)
+        public void Add(DailyReservation dailyReservation)
         {
+            List<Reservation> checkedReservations = new List<Reservation>();
+            foreach (var reservation in dailyReservation.Reservations)
+            {
+
+
                 if (reservation == null) throw new Exception("AddReservation - reservation is null");
 
                 if (reservation.Date > DateTime.Now.AddDays(7))
@@ -37,8 +42,23 @@ namespace GymTestBL.Services
                     throw new Exception("Reservation cannot be more than 7 days in the future");
                 }
 
-                (var reservationDB,var equipment, var timeSlot, var existingReservations, var equipmentReservations, var equipmentReservationsMember, var timeslots) = _reservationRepository.ReservationData(reservation);
+                (var reservationDB, var equipment, var timeSlot, var existingReservations, var equipmentReservations, var equipmentReservationsMember, var timeslots) = _reservationRepository.ReservationData(reservation);
 
+                if (checkedReservations.Count > 0)
+                {
+                    foreach (var checkedReservation in checkedReservations)
+                    {
+                        existingReservations.Add(checkedReservation);
+                        if(checkedReservation.EquipmentId == reservation.EquipmentId)
+                        {
+                            equipmentReservations.Add(checkedReservation);
+                            equipmentReservationsMember.Add(checkedReservation);
+                            var checkedTimeSlot = _reservationRepository.GetReservationTimeSlot(checkedReservation);
+                            timeslots.Add(checkedTimeSlot);
+                        }
+                    }
+                }
+                
                 if (equipment == null)
                 {
                     throw new Exception("Equipment is null");
@@ -88,8 +108,9 @@ namespace GymTestBL.Services
                         throw new Exception("You can only have 2 consecutive reservations for this equipment");
                     }
                 }
-
-                return _reservationRepository.Add(reservation);
+                checkedReservations.Add(reservation);
+            }
+                _reservationRepository.Add(dailyReservation);
         }
         public Reservation Update(Reservation reservation)
         {

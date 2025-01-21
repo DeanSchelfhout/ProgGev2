@@ -22,7 +22,7 @@ namespace GymTestDL.Repositories
             _context.SaveChanges();
             _context.ChangeTracker.Clear();
         }
-        public bool DeleteProgram(int id)
+        public bool DeleteProgram(string id)
         {
             try
             {

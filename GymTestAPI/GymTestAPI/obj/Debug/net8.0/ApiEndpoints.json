@@ -454,7 +454,7 @@
     "Parameters": [
       {
         "Name": "dataIn",
-        "Type": "GymTestAPI.DTO.ReservationDTO",
+        "Type": "GymTestAPI.DTO.DailyReservationDTO",
         "IsRequired": true
       }
     ],

@@ -33,13 +33,14 @@ namespace GymTestDL.Models
         public string Email { get; set; }
         public string Address { get; set; }
         public DateTime Birthday { get; set; }
-        public List<string> Interests { get; set; }
+        public List<string>? Interests { get; set; }
         public string MemberType { get; set; }
 
         // Navigation Properties
         public ICollection<CyclingSessionEF> CyclingSessions { get; set; }
         public ICollection<RunningSessionMainEF> RunningSessions { get; set; }
         public ICollection<ReservationEF> Reservations { get; set; }
+        public ICollection<DailyReservationEF> DailyReservations { get; set; }
         public ICollection<ProgramModelEF> Programs { get; set; }
     }
 

@@ -8,6 +8,7 @@ namespace GymTestDL
         public DbSet<CyclingSessionEF> CyclingSessions { get; set; }
         public DbSet<EquipmentEF> Equipment { get; set; }
         public DbSet<MemberEF> Members { get; set; }
+        public DbSet<DailyReservationEF> DailyReservations { get; set; }
         public DbSet<ProgramModelEF> ProgramModels { get; set; }
         public DbSet<ReservationEF> Reservations { get; set; }
         public DbSet<RunningSessionDetailEF> RunningSessionDetails { get; set; }

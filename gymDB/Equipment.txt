@@ -1,0 +1,16 @@
+SET IDENTITY_INSERT [dbo].[Equipment] ON
+
+INSERT [dbo].[Equipment]([EquipmentId], [DeviceType], [IsInService]) VALUES (1, N'treadmill1', 0)
+INSERT [dbo].[Equipment]([EquipmentId], [DeviceType], [IsInService]) VALUES (2, N'treadmill2', 0)
+INSERT [dbo].[Equipment]([EquipmentId], [DeviceType], [IsInService]) VALUES (3, N'treadmill3', 0)
+INSERT [dbo].[Equipment]([EquipmentId], [DeviceType], [IsInService]) VALUES (4, N'treadmill4', 0)
+INSERT [dbo].[Equipment]([EquipmentId], [DeviceType], [IsInService]) VALUES (5, N'treadmill5', 0)
+INSERT [dbo].[Equipment]([EquipmentId], [DeviceType], [IsInService]) VALUES (6, N'treadmill6', 0)
+INSERT [dbo].[Equipment]([EquipmentId], [DeviceType], [IsInService]) VALUES (7, N'bike1', 0)
+INSERT [dbo].[Equipment]([EquipmentId], [DeviceType], [IsInService]) VALUES (8, N'bike2', 0)
+INSERT [dbo].[Equipment]([EquipmentId], [DeviceType], [IsInService]) VALUES (9, N'bike3', 0)
+INSERT [dbo].[Equipment]([EquipmentId], [DeviceType], [IsInService]) VALUES (10, N'bike4', 0)
+INSERT [dbo].[Equipment]([EquipmentId], [DeviceType], [IsInService]) VALUES (11, N'bike5', 0)
+INSERT [dbo].[Equipment]([EquipmentId], [DeviceType], [IsInService]) VALUES (12, N'bike6', 0)
+
+SET IDENTITY_INSERT [dbo].[Equipment] OFF

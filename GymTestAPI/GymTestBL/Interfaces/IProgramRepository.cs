@@ -9,7 +9,7 @@ namespace GymTestBL.Interfaces
 {
     public interface IProgramRepository
     {
-        bool DeleteProgram(int Id);
+        bool DeleteProgram(string Id);
         ProgramModel AddProgram(ProgramModel programModel);
         ProgramModel UpdateProgram(ProgramModel programModel);
     }

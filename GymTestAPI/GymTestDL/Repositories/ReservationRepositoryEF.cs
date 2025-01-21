@@ -48,6 +48,13 @@ namespace GymTestDL.Repositories
                 throw new Exception("DeleteReservation");
             }
         }
+        public TimeSlot GetReservationTimeSlot(Reservation reservation)
+        {
+            var timeslotEF = _context.TimeSlots.FirstOrDefault(t => t.TimeSlotId == reservation.TimeSlotId);
+            var timeSlot = timeslotEF != null ? TimeSlotMapper.MapToBL(timeslotEF) : null;
+
+            return timeSlot;
+        }
         public (Reservation reservationDB, Equipment equipment, TimeSlot timeSlot, List<Reservation> existingReservations, List<Reservation> equipmentReservations, List<Reservation> equipmentReservationsMember, List<TimeSlot> timeslots) ReservationData(Reservation reservation)
         {
             var equipmentEF = _context.Equipment.FirstOrDefault(e => e.EquipmentId == reservation.EquipmentId);
@@ -70,7 +77,7 @@ namespace GymTestDL.Repositories
 
             var timeslots = equipmentReservationsMemberEF
                 .Select(r => _context.TimeSlots.FirstOrDefault(t => t.TimeSlotId == r.TimeSlotId))
-                .Where(t => t != null) // Filter null-waarden
+                .Where(t => t != null)
                 .Select(TimeSlotMapper.MapToBL)
                 .ToList();
 
@@ -80,15 +87,14 @@ namespace GymTestDL.Repositories
             return (reservationDB, equipment, timeSlot, existingReservations, equipmentReservations, equipmentReservationsMember, timeslots);
         }
 
-        public Reservation Add(Reservation reservation)
+        public void Add(DailyReservation dailyReservation)
         {
             try
             {
-                var reservationDB = ReservationMapper.MapToDL(reservation);
-                _context.Reservations.Add(reservationDB);
+                var dailyReservationEF = DailyReservationMapper.MapToDL(dailyReservation);
+                dailyReservationEF.Id = 0;
+                _context.DailyReservations.Add(dailyReservationEF);
                 _context.SaveChanges();
-
-                return ReservationMapper.MapToBL(reservationDB);
             }
             catch (Exception ex)
             {

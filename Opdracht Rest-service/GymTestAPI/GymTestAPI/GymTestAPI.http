@@ -1,6 +1,0 @@
-@GymTestAPI_HostAddress = http://localhost:5207
-
-GET {{GymTestAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

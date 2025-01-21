@@ -17,19 +17,57 @@ namespace GymTestAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add([FromBody] ReservationDTO dataIn)
+        public IActionResult Add([FromBody] DailyReservationDTO dataIn)
         {
             try
             {
+                if(
+                    (dataIn.EquipmentId1 == null && dataIn.TimeSlotId1 == null) &&
+                    (dataIn.EquipmentId2 == null && dataIn.TimeSlotId2 == null) &&
+                    (dataIn.EquipmentId3 == null && dataIn.TimeSlotId3 == null) &&
+                    (dataIn.EquipmentId4 == null && dataIn.TimeSlotId4 == null)
+                    )
+                {
+                    return BadRequest(new { message = "Invallid reservation" });
+                }
+
+                DailyReservation dailyReservation = new DailyReservation();
+                dailyReservation.MemberId = dataIn.MemberId;
+                dailyReservation.Date = dataIn.Date;
+                List<Reservation> reservations = new List<Reservation>();
                 Reservation reservation = new Reservation();
                 reservation.ReservationId = 0;
-                reservation.EquipmentId = dataIn.EquipmentId;
                 reservation.MemberId = dataIn.MemberId;
-                reservation.TimeSlotId = dataIn.TimeSlotId;
                 reservation.Date = dataIn.Date;
 
-                RepoService.Add(reservation);
-                return Ok(reservation);
+                if (dataIn.EquipmentId1 != null && dataIn.TimeSlotId1 != null)
+                {
+                    reservation.TimeSlotId = dataIn.TimeSlotId1;
+                    reservation.EquipmentId = dataIn.EquipmentId1;
+                    reservations.Add(reservation);
+                }
+                if (dataIn.EquipmentId2 != null && dataIn.TimeSlotId2 != null)
+                {
+                    reservation.TimeSlotId = dataIn.TimeSlotId2;
+                    reservation.EquipmentId = dataIn.EquipmentId2;
+                    reservations.Add(reservation);
+                }
+                if (dataIn.EquipmentId3 != null && dataIn.TimeSlotId3 != null)
+                {
+                    reservation.TimeSlotId = dataIn.TimeSlotId3;
+                    reservation.EquipmentId = dataIn.EquipmentId3;
+                    reservations.Add(reservation);
+                }
+                if (dataIn.EquipmentId4 != null && dataIn.TimeSlotId4 != null)
+                {
+                    reservation.TimeSlotId = dataIn.TimeSlotId4;
+                    reservation.EquipmentId = dataIn.EquipmentId4;
+                    reservations.Add(reservation);
+                }
+                dailyReservation.Reservations = reservations;
+
+                RepoService.Add(dailyReservation);
+                return Ok();
             }
             catch (Exception ex)
             {
