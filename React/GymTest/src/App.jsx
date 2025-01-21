@@ -3,12 +3,17 @@ import { useNavigate } from 'react-router-dom';
 
 const App = () => {
   const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://localhost:7082/api/Member")
       .then((response) => response.json())
-      .then((data) => setData(data))
+      .then((data) => {
+        setData(data);
+        setFilteredData(data);
+      })
       .catch((error) => console.error(error));
   }, []);
 
@@ -29,9 +34,34 @@ const App = () => {
     navigate(`/reservation/${memberId}`);
   };
 
+  const handleSearch = (event) => {
+    const value = event.target.value;
+    setSearchTerm(value);
+
+    const filtered = data.filter(
+      (item) =>
+        item.firstName.toLowerCase().includes(value.toLowerCase()) ||
+        item.lastName.toLowerCase().includes(value.toLowerCase())
+    );
+
+    setFilteredData(filtered);
+  };
+
   return (
     <div>
       <h1>Members</h1>
+      <input
+        type="text"
+        placeholder="Search by first or last name"
+        value={searchTerm}
+        onChange={handleSearch}
+        style={{
+          marginBottom: '20px',
+          padding: '10px',
+          width: '100%',
+          boxSizing: 'border-box',
+        }}
+      />
       <table style={{ width: '100%', borderCollapse: 'collapse', margin: '20px 0' }}>
         <thead>
           <tr>
@@ -46,7 +76,7 @@ const App = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((item, index) => (
+          {filteredData.map((item, index) => (
             <tr key={index} style={{ textAlign: 'left', borderBottom: '1px solid #ddd' }}>
               <td style={{ border: '1px solid #ddd', padding: '8px' }}>{item.firstName}</td>
               <td style={{ border: '1px solid #ddd', padding: '8px' }}>{item.lastName}</td>
