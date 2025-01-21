@@ -281,17 +281,7 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "GymTestAPI.DTO.SessionsDTO",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "GymTestAPI.Controllers.MemberController",
@@ -477,6 +467,32 @@
     "ReturnTypes": [
       {
         "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GymTestAPI.Controllers.ReservationController",
+    "Method": "Get",
+    "RelativePath": "api/Reservation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GymTestBL.Models.DailyReservation",
         "MediaTypes": [
           "text/plain",
           "application/json",

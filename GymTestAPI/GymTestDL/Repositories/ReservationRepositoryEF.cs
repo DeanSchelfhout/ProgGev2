@@ -33,7 +33,18 @@ namespace GymTestDL.Repositories
                 throw new Exception("UpdateReservation", ex);
             }
         }
-
+        public DailyReservation Get(int id)
+        {
+            try
+            {
+                var reservation = _context.DailyReservations.Include(r => r.Reservations).FirstOrDefault(r => r.Id == id);
+                return DailyReservationMapper.MapToBL(reservation);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("GetReservation", ex);
+            }
+        }
         public bool Delete(int id)
         {
             try
@@ -42,10 +53,9 @@ namespace GymTestDL.Repositories
                 _context.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw new Exception("DeleteReservation");
+                throw new Exception("DeleteReservation",ex);
             }
         }
         public TimeSlot GetReservationTimeSlot(Reservation reservation)

@@ -12,6 +12,7 @@ namespace GymTestBL.Interfaces
         public Reservation Update(Reservation reservation, Reservation reservationDB);
         public void Add(DailyReservation dailyReservation);
         public bool Delete(int id);
+        public DailyReservation Get(int id);
         public TimeSlot GetReservationTimeSlot(Reservation reservation);
         public (Reservation reservationDB, Equipment equipment, TimeSlot timeSlot,
         List<Reservation> existingReservations, List<Reservation> equipmentReservations,

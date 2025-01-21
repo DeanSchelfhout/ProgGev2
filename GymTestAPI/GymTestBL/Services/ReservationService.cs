@@ -28,6 +28,18 @@ namespace GymTestBL.Services
                 throw new Exception("DeleteReservation", ex);
             }
         }
+        public DailyReservation Get(int id)
+        {
+            try
+            {
+              return _reservationRepository.Get(id);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("GetReservation", ex);
+            }
+        }
         public void Add(DailyReservation dailyReservation)
         {
             List<Reservation> checkedReservations = new List<Reservation>();

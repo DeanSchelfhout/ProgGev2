@@ -37,7 +37,7 @@ namespace GymTestAPI.Controllers
                 List<Reservation> reservations = new List<Reservation>();
                 
 
-                if (dataIn.EquipmentId1 != 0 && dataIn.TimeSlotId1 != 0)
+                if (dataIn.EquipmentId1 != 0 || dataIn.TimeSlotId1 != 0)
                 {
                     Reservation reservation = new Reservation();
                     reservation.ReservationId = 0;
@@ -47,7 +47,7 @@ namespace GymTestAPI.Controllers
                     reservation.EquipmentId = dataIn.EquipmentId1;
                     reservations.Add(reservation);
                 }
-                if (dataIn.EquipmentId2 != 0 && dataIn.TimeSlotId2 != 0)
+                if (dataIn.EquipmentId2 != 0 || dataIn.TimeSlotId2 != 0)
                 {
                     Reservation reservation = new Reservation();
                     reservation.ReservationId = 0;
@@ -57,7 +57,7 @@ namespace GymTestAPI.Controllers
                     reservation.EquipmentId = dataIn.EquipmentId2;
                     reservations.Add(reservation);
                 }
-                if (dataIn.EquipmentId3 != 0 && dataIn.TimeSlotId3 != 0)
+                if (dataIn.EquipmentId3 != 0 || dataIn.TimeSlotId3 != 0)
                 {
                     Reservation reservation = new Reservation();
                     reservation.ReservationId = 0;
@@ -67,7 +67,7 @@ namespace GymTestAPI.Controllers
                     reservation.EquipmentId = dataIn.EquipmentId3;
                     reservations.Add(reservation);
                 }
-                if (dataIn.EquipmentId4 != 0 && dataIn.TimeSlotId4 != 0)
+                if (dataIn.EquipmentId4 != 0 || dataIn.TimeSlotId4 != 0)
                 {
                     Reservation reservation = new Reservation();
                     reservation.ReservationId = 0;
@@ -93,6 +93,12 @@ namespace GymTestAPI.Controllers
         {
             RepoService.Delete(id);
             return true;
+        }
+        [Route("{id}")]
+        [HttpGet]
+        public DailyReservation Get(int id)
+        {
+            return RepoService.Get(id);
         }
         [Route("{id}")]
         [HttpPut]
