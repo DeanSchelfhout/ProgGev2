@@ -32,7 +32,7 @@ namespace GymTestAPI.Controllers
         }
         [Route("{id}")]
         [HttpDelete]
-        public bool Delete(int id)
+        public bool Delete(string id)
         {
             RepoService.DeleteProgram(id);
             return true;

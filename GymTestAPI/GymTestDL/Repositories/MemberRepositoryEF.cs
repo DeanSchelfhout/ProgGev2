@@ -47,10 +47,6 @@ namespace GymTestDL.Repositories
             try
             {
                 return _context.Members
-                    .Include(m => m.Programs)
-                    .Include(m => m.Reservations)
-                    .Include(m => m.CyclingSessions)
-                    .Include(m => m.RunningSessions)
                     .Select(m => MapMember.MapToBL(m))
                     .ToList();
             }
