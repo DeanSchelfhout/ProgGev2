@@ -21,14 +21,14 @@ namespace GymTestDL.Models
 
         public DailyReservationEF(int memberId, DateTime date, ICollection<ReservationEF> reservations)
         {
-            Member = new MemberEF();
-            Member.MemberId = memberId;
+            MemberId = memberId;
             Date = date;
             Reservations = reservations;
         }
 
         [Key]
         public int Id { get; set; }
+        public int MemberId { get; set; }
         public MemberEF Member{ get; set; }
         public DateTime Date{ get; set; }
         public ICollection<ReservationEF> Reservations{ get; set; }
